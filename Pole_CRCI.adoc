@@ -1,0 +1,9 @@
+== Description du pôle CRCI
+
+Centre de Ressources et des Compétences Informatiques.
+
+Equipe de 3 personnes.
+
+Experts: Supports technique transverse, formations, garant de la qualité technique des projets, mise en place de bonne pratique en s'assurant de leur exécution, responsable de la mise en place et de la maintenance des outils de production (PIC).
+
+	- Le lien entre les équipes de production et le pôle CRCI dans le calcul quantitatif des VM utiles et qualitatif des environnement de développement pour chaque développeur.
