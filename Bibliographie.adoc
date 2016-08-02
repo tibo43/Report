@@ -1,0 +1,8 @@
+= Bibliographie
+
+[1] _DevOps: A Software Architect's Perspective_ : Len Bass,Ingo Weber,Liming Zhu
+https://books.google.com.br/books?hl=fr&lr=&id=fcwkCQAAQBAJ&oi=fnd&pg=PT13&dq=devops&ots=KQAoo9OSXc&sig=OlWvAETe04w20bk6j4fWQ8S4Nrs#v=onepage&q=devops&f=false
+
+[2] _Continuous Delivery_ : Jez Humble and David Farley
+http://www.johnchukwuma.com/training/ContinuousDelivery.pdf
+

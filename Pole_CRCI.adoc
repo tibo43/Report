@@ -1,25 +1,26 @@
 == Description du pôle CRCI
 
-=== Sommaire 
+=== Sommaire
 
 Equipe? Travail?
 
 Mouvance devops et lien étroit avec pôle Expertise
 
+Experts: Supports technique transverse, formations, garant de la qualité technique des projets, mise en place de bonne pratique en s'assurant de leur exécution, responsable de la mise en place et de la maintenance des outils de production (PIC).
+* Le lien entre les équipes de production et le pôle CRCI dans le calcul quantitatif des VM utiles au bon déroulement des projets et le calcul qualitatif des environnements de développement pour chaque développeur.
+
 Infrastructure Actuelle => Infrastructure Future?
 
 Problèmatique?
 
-- Automatiser les déploiements
+* Automatiser les déploiements
 
-- Reporting de l'Infrastructure à tout instant (Ressources Utilisées, Problème sur les environnements)
-
-=== Petit Report
-
-Experts: Supports technique transverse, formations, garant de la qualité technique des projets, mise en place de bonne pratique en s'assurant de leur exécution, responsable de la mise en place et de la maintenance des outils de production (PIC).
-
-	- Le lien entre les équipes de production et le pôle CRCI dans le calcul quantitatif des VM utiles au bon déroulement des projets et le calcul qualitatif des environnements de développement pour chaque développeur.
+* Reporting de l'Infrastructure à tout instant (Ressources Utilisées, Problème sur les environnements)
 
 === Vrai
 
 Le Pôle du CRCI -Centre de Ressources et des Compétences Informatiques- est responsable de l'infrastructure système et réseaux, de la gestion du parc et des solutions et fourni une assistance sur certains points spécifiques. Son existence et son bon fonctionnement sont primordiaux dans l'entreprise. Trois collaborateurs constituent cette équipe, *Arnaud Roudsovsky*, responsable du pôle, *Frédérique Garcia*, , et *Romain Ballan*, .
+
+Depuis 2014, l'entreprise a décidé de faire évoluer son infrastructure et ses _méthodes de travail_ autour du mouvement *DevOps*. Comme le présente le livre de Len Bass, Ingo Weber et Liming Zhu, DevOps est un ensemble de pratique cherchant à réduire le temps entre la demande et la concréatisation d'une modification d'un système en production tout en assurant son bon fonctionnement[1]. Ce nom est la contraction de _Development_ (référence au métier de développeur) et _Operation_ (référence aux différentes discpline du métier d'administrateur sytème). Il symbolise le thème émergeant de cette culture, à savoir l'étroite collaboration de ces métiers dans la réalisation des projets.
+
+Au sein d'ISC France, cette stratégie opérationnelle est poussé par le pôle CRCI et le pôle Expertise. Ce dernier est le garant de la qualité technique des projets de part un support technique, la dispense de formations et la mise en place de bonne pratique à exécuter par les développeurs. Dans la culture DevOps, les experts sont, notamment, responsables de la mise en place et de la maintenance des outils de production tel que la Plateforme d'Intégration Continue. Le _Continuous Delivery_ est une approche de développement en lien avec la mouvance DevOps. Il a pour but de développer, de tester et de sortir des versions de façon rapide et répeter jusqu'à avoir un logiciel de haute qualité[2]. En plus d'insuffler aux développeurs la culture DevOps, le pôle expertise est le lien entre les équipes de production et le pôle CRCI dans le calcul quantitatif des ressources utiles au bon déroulement des projets et le calcul qualitatif des environnements de développement pour chaque développeur.
