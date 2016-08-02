@@ -1,9 +1,25 @@
 == Description du pôle CRCI
 
-Centre de Ressources et des Compétences Informatiques.
+=== Sommaire 
 
-Equipe de 3 personnes.
+Equipe? Travail?
+
+Mouvance devops et lien étroit avec pôle Expertise
+
+Infrastructure Actuelle => Infrastructure Future?
+
+Problèmatique?
+
+- Automatiser les déploiements
+
+- Reporting de l'Infrastructure à tout instant (Ressources Utilisées, Problème sur les environnements)
+
+=== Petit Report
 
 Experts: Supports technique transverse, formations, garant de la qualité technique des projets, mise en place de bonne pratique en s'assurant de leur exécution, responsable de la mise en place et de la maintenance des outils de production (PIC).
 
-	- Le lien entre les équipes de production et le pôle CRCI dans le calcul quantitatif des VM utiles et qualitatif des environnement de développement pour chaque développeur.
+	- Le lien entre les équipes de production et le pôle CRCI dans le calcul quantitatif des VM utiles au bon déroulement des projets et le calcul qualitatif des environnements de développement pour chaque développeur.
+
+=== Vrai
+
+Le Pôle du CRCI -Centre de Ressources et des Compétences Informatiques- est responsable de l'infrastructure système et réseaux, de la gestion du parc et des solutions et fourni une assistance sur certains points spécifiques. Son existence et son bon fonctionnement sont primordiaux dans l'entreprise. Trois collaborateurs constituent cette équipe, *Arnaud Roudsovsky*, responsable du pôle, *Frédérique Garcia*, , et *Romain Ballan*, .
