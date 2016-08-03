@@ -4,89 +4,43 @@
 
 == Courte description de SQLi Groupe
 
+include::SQLi_Groupe.adoc[]
+
 == Courte description de ISC France
+
+include::ISC_France.adoc[]
 
 == Description du pôle CRCI
 
-Equipe? Travail?
+include::Pole_CRCI.adoc[]
 
-Mouvance devops et lien étroit avec pôle Expertise
-
-Infrastructure Actuelle => Infrastructure Future?
-
-Problèmatique?
-
-- Automatiser les déploiements
-
-- Reporting de l'Infrastructure à tout instant (Ressources Utilisées, Problème sur les environnements)
-
-= Travail Principal => Upgrade Zabbix
+= Mise à jour et configuration de Zabbix
 
 == Pourquoi?
 
-- (Server) L'outil avait 2 versions de retard:
 
-L'entreprise a pour objectif d'être à jour dans les versions de ces outils internes
-
-- (Agent) Avoir des versions le plus à jours possible (si possible) et une installation homogène.
-
-- (Server & Agent) une configuration plus adaptée à ces besoins actuels et futurs.
 
 == Compréhension
 
-- (Server & Agent) Compréhension de l'outil (fonctionnement et utilisation globale) par la création d'une plateforme de test.
 
-Explication de Zabbix
-Quels sont les buts? Monitoring et Alertes en cas de panne.
-
-- (Server & Agent) Utlisation de l'outil par le pôle
-
-Le pôle s'est laissé submerger par la quantité de mail => Augmentation de l'activité (du nombre de VM)
-
-En plus changement important sur l'infrastructure (from VMWare to Openstack) => zabbix n'était pas la principale occupation
 
 == Comment?
 
-- Installation de la dernière version stable du serveur
 
-- Installation de la version "Max" sur chaque serveur.
-
-- Remonter des hosts automatiquement dans le zabbix.
-
-- Configuration des différents items, triggers, graphs.
-
-- Ressortir les sla's sur l'infrastructure
 
 = Activitité Annexe
 
 == Scripting installation + configuration Agent
 
-- Besoin de déployer rapidement et efficacement l'Agent (Automatisation)
 
-- Script batch pour windows
-
-- Script python pour linux (Nova_Hostname)
 
 == Utilisation Ansible
 
-- En l'état les VM ont une version possiblement pas à jour et une mauvaise configuration
 
-- L'outil permet de pousser et d'exécuter des Script à un nombre de VM de masse
-
-- Expliquer utilisation Windows et Linux.
 
 == Création image docker pour monitorer container
 
-- Besoin de monitorer les containers
 
-- Plusieurs tentatives
-
-- Ma solution
 
 == Scripting nombre de VM
 
-- Infrastructure actuelle hétérogène (VMWare + Openstack)
-
-- Besoin de connaitre l'étendue des VM et leur
-
-- Création de 3 scripts Python (ESXi 5.0, 5.5, Openstack)
