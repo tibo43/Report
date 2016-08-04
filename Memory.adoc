@@ -2,31 +2,17 @@
 
 = Contexte Industriel
 
-== Courte description de SQLi Groupe
-
 include::SQLi_Groupe.adoc[]
 
 == Courte description de ISC France
 
 include::ISC_France.adoc[]
 
-== Description du pôle CRCI
-
 include::Pole_CRCI.adoc[]
 
 = Mise à jour et configuration de Zabbix
 
-== Pourquoi?
-
-
-
-== Compréhension
-
-
-
-== Comment?
-
-
+include::Zabbix.adoc[]
 
 = Activitité Annexe
 

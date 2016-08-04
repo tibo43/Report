@@ -1,0 +1,39 @@
+== Pourquoi?
+
+- (Server) L'outil avait 2 versions de retard:
+
+L'entreprise a pour objectif d'être à jour dans les versions de ces outils internes
+
+- (Agent) Avoir des versions le plus à jours possible (si possible) et une installation homogène.
+
+- (Server & Agent) une configuration plus adaptée à ces besoins actuels et futurs.
+
+== Compréhension
+
+- (Server & Agent) Compréhension de l'outil (fonctionnement et utilisation globale) par la création d'une plateforme de test.
+
+Explication de Zabbix
+Quels sont les buts? Monitoring et Alertes en cas de panne.
+
+- (Server & Agent) Utlisation de l'outil par le pôle
+
+Le pôle s'est laissé submerger par la quantité de mail => Augmentation de l'activité (du nombre de VM)
+
+En plus changement important sur l'infrastructure (from VMWare to Openstack) => zabbix n'était pas la principale occupation
+
+== Comment?
+
+- Installation de la dernière version stable du serveur
+
+- Installation de la version "Max" sur chaque serveur.
+
+- Remonter des hosts automatiquement dans le zabbix.
+
+- Configuration des différents items, triggers, graphs.
+
+- Ressortir les sla's sur l'infrastructure
+
+
+== Les _objectifs_ du Pôle CRCI
+
+Depuis 2014, le pôle CRCI a mis en place un outil de surveillance et de mesure. 
