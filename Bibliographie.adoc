@@ -28,4 +28,9 @@ http://mirror.ihc.ru/download.openvz.org/doc/openvz-intro.pdf
 [9] Dirk Merkel: _Docker: Lightweight Linux Containers for Consistent Development and Deployment_
 http://www.linuxjournal.com/content/docker-lightweight-linux-containers-consistent-development-and-deployment
 
-[10]
+[10] TROUVER ARTICLE SUR LES BIEN FAIT DU MONITORING
+
+[11] SLA et pourquoi.
+
+[12] CoreOS + Docker
+

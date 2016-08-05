@@ -22,44 +22,26 @@ Problèmatique?
 
 = Travail Principal => Upgrade Zabbix
 
-== Pourquoi?
+Objectif du CRCI:
 
-- (Server) L'outil avait 2 versions de retard:
+Etape 1: phase de recherche
 
-L'entreprise a pour objectif d'être à jour dans les versions de ces outils internes
+* Recherche du logiciel adapté à nos besoin (docker, scénario web, besoin de SLAs, alerte)
+* Recherche de la version : L'entreprise a pour objectif d'être à jour dans les versions de ces outils internes
 
-- (Agent) Avoir des versions le plus à jours possible (si possible) et une installation homogène.
+Etape 2 : phase de test et mise en production
 
-- (Server & Agent) une configuration plus adaptée à ces besoins actuels et futurs.
+* (Server & Agent) Compréhension de l'outil (fonctionnement et utilisation globale) par la création d'une plateforme de test :
+* (Server & Agent) une configuration (fichier et trigger) plus adaptée à ces besoins actuels et futurs.
+* Evoqué le cas de Docker
+* Remplacement du serveur
+* (Agent) Avoir des versions le plus à jours possible (si possible) et une installion homogène et envoie de nouvelle conf
 
-== Compréhension
-
-- (Server & Agent) Compréhension de l'outil (fonctionnement et utilisation globale) par la création d'une plateforme de test.
-
-Explication de Zabbix
-Quels sont les buts? Monitoring et Alertes en cas de panne.
-
-- (Server & Agent) Utlisation de l'outil par le pôle
-
-Le pôle s'est laissé submerger par la quantité de mail => Augmentation de l'activité (du nombre de VM)
-
-En plus changement important sur l'infrastructure (from VMWare to Openstack) => zabbix n'était pas la principale occupation
-
-== Comment?
-
-- Installation de la dernière version stable du serveur
-
-- Installation de la version "Max" sur chaque serveur.
-
-- Remonter des hosts automatiquement dans le zabbix.
-
-- Configuration des différents items, triggers, graphs.
-
-- Ressortir les sla's sur l'infrastructure
+Conclusion sur le sujet
 
 = Activitité Annexe
 
-== Scripting installation + configuration Agent
+== Scripting installation + configuration Agent + Utilisation Ansible
 
 - Besoin de déployer rapidement et efficacement l'Agent (Automatisation)
 
@@ -67,21 +49,11 @@ En plus changement important sur l'infrastructure (from VMWare to Openstack) => 
 
 - Script python pour linux (Nova_Hostname)
 
-== Utilisation Ansible
-
 - En l'état les VM ont une version possiblement pas à jour et une mauvaise configuration
 
 - L'outil permet de pousser et d'exécuter des Script à un nombre de VM de masse
 
 - Expliquer utilisation Windows et Linux.
-
-== Création image docker pour monitorer container
-
-- Besoin de monitorer les containers
-
-- Plusieurs tentatives
-
-- Ma solution
 
 == Scripting nombre de VM
 

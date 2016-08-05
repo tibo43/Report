@@ -1,39 +1,29 @@
-== Pourquoi?
+Etape 1: phase de recherche
 
-- (Server) L'outil avait 2 versions de retard:
+* Recherche du logiciel adapté à nos besoin (report par projet, docker, scénario web, besoin de SLAs)
+* Recherche de la version : L'entreprise a pour objectif d'être à jour dans les versions de ces outils internes
 
-L'entreprise a pour objectif d'être à jour dans les versions de ces outils internes
+Etape 2 : phase de test et mise en production
 
-- (Agent) Avoir des versions le plus à jours possible (si possible) et une installation homogène.
+* (Server & Agent) Compréhension de l'outil (fonctionnement et utilisation globale) par la création d'une plateforme de test :
+* (Server & Agent) une configuration (fichier et trigger) plus adaptée à ces besoins actuels et futurs.
+* Evoqué le cas de Docker
+* Remplacement du serveur
+* (Agent) Avoir des versions le plus à jours possible (si possible) et une installion homogène et envoie de nouvelle conf
 
-- (Server & Agent) une configuration plus adaptée à ces besoins actuels et futurs.
+Le apports de cette nouvelle configuration
 
-== Compréhension
+== L'initiation du changement
 
-- (Server & Agent) Compréhension de l'outil (fonctionnement et utilisation globale) par la création d'une plateforme de test.
+Depuis le troisième trimestre 2014, le pôle CRCI s'est doté d'un serveur _Zabbix_, un logiciel open source mesurant et surveillant l'infrastructure. Ce type d'application est très important pour les infogérants. Comme l'évoque l'article de  [11] ... .
+Cependant, l'expansion de l'activité, l'évolution de l'infrastructure et la mise en place de bonne pratique en lien avec la culture DevOps ont conduit les ingénieurs du pôle à ne plus utiliser le logiciel. Il était devenu une tare de part ses alertes nombreuses, fréquentes et non importantes. A partir de ces reproches, nous avons décidé de repartir du commencement et un processus de mise en production s'est déroulé en deux étapes. Pour commencer, nous avons remis en cause le logiciel par la recherche de nouvelles solutions. Ensuite, un environnement de test a été créé avant de déployer l'outil et la configuration adéquat vers l'infrastructure. Enfin un bilan sera tiré de cette nouvelle configuration pour le pôle CRCI.
 
-Explication de Zabbix
-Quels sont les buts? Monitoring et Alertes en cas de panne.
+== Remise en cause de la solution
 
-- (Server & Agent) Utlisation de l'outil par le pôle
+Pour débuter, notre première action a été de lister les objectifs actuels et futurs auxquels l'outil devra répondre.
+L'infrastructure d'ISC France héberge des applications web internes. Certaines sont primordiales pour la gestion quotidienne du travail des collaborateurs, d'autres facilitent la vie de l'entreprise. Le pôle CRCI doit pouvoir recevoir une alerte rapide lorsque l'application n'est pas accessible. La solution à envisager doit pouvoir simuler un scénario web comme un simple accès sur une page web ou une tentative de connexion.
+Le pôle CRCI doit rendre un rapport chaque semaine sur la disponibilité de l'infrastructure. *_SLAs_* [11]
+La mise en place de la culture DevOps a emmené l'utilisation, au sein de l'infrastructure, de l'outil Docker combiné au système d'exploitation _CoreOS_, système d'exploitation léger et adapté dans l'utilisation de cet outil [12]. La solution à choisir doit pouvoir surveiller ce genre d'environnement virtuel sans devoir installer de composant sur le système d'exploitation.
+Cette mouvance qui est en train de s'installer dans l'entreprise doit pousser les équipes de développement à quantifier les ressources matérielles utilisées par leurs programmes. L'outil doit donc pouvoir fournir des graphes et des valeurs lisibles et compréhensible à des non-initiés à l'infogérance.
 
-Le pôle s'est laissé submerger par la quantité de mail => Augmentation de l'activité (du nombre de VM)
-
-En plus changement important sur l'infrastructure (from VMWare to Openstack) => zabbix n'était pas la principale occupation
-
-== Comment?
-
-- Installation de la dernière version stable du serveur
-
-- Installation de la version "Max" sur chaque serveur.
-
-- Remonter des hosts automatiquement dans le zabbix.
-
-- Configuration des différents items, triggers, graphs.
-
-- Ressortir les sla's sur l'infrastructure
-
-
-== Les _objectifs_ du Pôle CRCI
-
-Depuis 2014, le pôle CRCI a mis en place un outil de surveillance et de mesure. 
+A partir de cette liste, nous avons pu nous mettre à la recherche d'un logiciel remplissant ces conditions. Il existe de nombreuses offres sur le marché. Cependant très peu répondent entièrement à nos attentes.
