@@ -1,24 +1,16 @@
-Etape 1: phase de recherche
-
-* Recherche du logiciel adapté à nos besoin (report par projet, docker, scénario web, besoin de SLAs)
-* Recherche de la version : L'entreprise a pour objectif d'être à jour dans les versions de ces outils internes
-
-Etape 2 : phase de test et mise en production
-
-* (Server & Agent) Compréhension de l'outil (fonctionnement et utilisation globale) par la création d'une plateforme de test :
-* (Server & Agent) une configuration (fichier et trigger) plus adaptée à ces besoins actuels et futurs.
-* Evoqué le cas de Docker
-* Remplacement du serveur
-* (Agent) Avoir des versions le plus à jours possible (si possible) et une installion homogène et envoie de nouvelle conf
-
 Le apports de cette nouvelle configuration
+
+** Système efficace
+** tout est reporter (Switch, VM, Docker)
+** suppression non automatique
+** nouvel hôte lorsque le nom n'est pas le même
 
 == L'initiation du changement
 
-Depuis le troisième trimestre 2014, le pôle CRCI s'est doté d'un serveur _Zabbix_, un logiciel open source mesurant et surveillant l'infrastructure. Ce type d'application est très important pour les infogérants. Comme l'évoque l'article de  [11] ... .
+Depuis le troisième trimestre 2014, le pôle CRCI s'est doté d'un serveur _Zabbix_, un logiciel open source mesurant et surveillant l'infrastructure. Ce type d'application est très important pour les infogérants. Comme l'évoque l'article de  [10] ... .
 Cependant, l'expansion de l'activité, l'évolution de l'infrastructure et la mise en place de bonne pratique en lien avec la culture DevOps ont conduit les ingénieurs du pôle à ne plus utiliser le logiciel. Il était devenu une tare de part ses alertes nombreuses, fréquentes et non importantes. A partir de ces reproches, nous avons décidé de repartir du commencement et un processus de mise en production s'est déroulé en deux étapes. Pour commencer, nous avons remis en cause le logiciel par la recherche de nouvelles solutions. Ensuite, un environnement de test a été créé avant de déployer l'outil et la configuration adéquat vers l'infrastructure. Enfin un bilan sera tiré de cette nouvelle configuration pour le pôle CRCI.
 
-== Remise en cause de la solution
+== Remise en cause de la solution actuelle
 
 Pour débuter, notre première action a été de lister les objectifs actuels et futurs auxquels l'outil devra répondre.
 L'infrastructure d'ISC France héberge des applications web internes. Certaines sont primordiales pour la gestion quotidienne du travail des collaborateurs, d'autres facilitent la vie de l'entreprise. Le pôle CRCI doit pouvoir recevoir une alerte rapide lorsque l'application n'est pas accessible. La solution à envisager doit pouvoir simuler un scénario web comme un simple accès sur une page web ou une tentative de connexion.
@@ -26,4 +18,31 @@ Le pôle CRCI doit rendre un rapport chaque semaine sur la disponibilité de l'i
 La mise en place de la culture DevOps a emmené l'utilisation, au sein de l'infrastructure, de l'outil Docker combiné au système d'exploitation _CoreOS_, système d'exploitation léger et adapté dans l'utilisation de cet outil [12]. La solution à choisir doit pouvoir surveiller ce genre d'environnement virtuel sans devoir installer de composant sur le système d'exploitation.
 Cette mouvance qui est en train de s'installer dans l'entreprise doit pousser les équipes de développement à quantifier les ressources matérielles utilisées par leurs programmes. L'outil doit donc pouvoir fournir des graphes et des valeurs lisibles et compréhensible à des non-initiés à l'infogérance.
 
-A partir de cette liste, nous avons pu nous mettre à la recherche d'un logiciel remplissant ces conditions. Il existe de nombreuses offres sur le marché. Cependant très peu répondent entièrement à nos attentes.
+A partir de cette liste, nous avons pu nous mettre à la recherche d'un logiciel remplissant ces conditions. Il existe de nombreuses offres sur le marché. Néanmoins, très peu d'entre elles répondent entièrement à nos attentes. Notre choix s'est donc porté sur la solution que nous utilisions, Zabbix, pour plusieurs raison.
+Ce logiciel détient les éléments de base de nos exigences, à savoir l'envoie d'alerte en cas d'indisponibilité sur une application we que nous hébergeons et le calcul de SLAs calculant la disponibilité de l'infrastructure.
+De plus, l'offre est open source et possède une large communauté active offrant des fonctionnalités supplémentaires utiles à nos exigences, comme par exemple la surveillance et la mesure des ressources utilisés par les environnements virtuels sous Docker.
+Ensuite, la nouvelle version de ce logiciel offre une interface plus ergonomique. Cette nouveauté rendra l'utilisation des données et des graphes plus lisibles aux équipe de développement.
+Enfin, l'équipe est déjà formée sur cet outil. Cet avantage permet de gagner un temps considérable sur son approche basique. Cette conjoncture nous sera utile pour configurer plus précisemment la solution et mettre en place les fonctionnalités souhaitées.
+
+== Environnement de test et mise en production
+
+Après le choix du logiciel, nous avons dû la déployer. Notre but a été de configurer la future solution d'une manière optimale tout en gardant en fonctionnement la solution présente sur l'infrastructure. Pour cela, on a recréé un environnement de test comportant le minimum d'environnement nécessaire à la configuration.
+Zabbix est une offre de surveillance et de mesure de l'activité infrastructural d'une entreprise. Il est basé sur le système de client-serveur signifiant que l'agent, dans le cas de cette solution, envoie au serveur les données que celui-ci souhaite recevoir. La solution possède trois logiciels.
+
+** _Serveur_ qui est le centre du service. Il est combiné à une base de données servant à stocker les données récupérées et à un serveur web qui permet de déployer une interface web permettant de configurer les mesures que l'on souhaite récupété et aidant la lecture de celle-ci. Le serveur à la possibilité de fonctionner en *_standalone_* vu qu'il a la fonctionnalité de récupérer et traiter les informations envoyées par le protocole SNMP [13].
+** _Agent_ qui sont les noeuds du système. Ils sont installés sur chaque environnement à surveiller. Chaque agent récupère les mesures phyisiques et logiciels que souhaite le serveur et il lui les envoient. Dans une infrastructure, un agent doit obligatoirement avoir un serveur à qui il peut communiquer.
+** _Proxy_ qui font office d'intermédiaire entre un agent et un serveur. Son but est de récolter les informations d'un groupe d'agent et de les envoyer au serveur principal. Ce logiciel peut ne pas être utilisé.
+
+A partir de notre plateforme de test, on a pu configurer notre serveur et nos agents à notre convenance. Dans un premier temps, nous avons décidé de ne pas utiliser la fonctionnalité proxy de la solution. Il y a eu deux phases dans la configuration.
+La première concerne les fichiers de configuration des agents et du serveur. Il faut que l'agent connaisse le nom de la machine sur lequel il est installé et l'adresse IP du serveur et que ce dernier démarre assez de processus système pour accueillir toutes les données qui lui sont destinées. De plus, nous avons dû rentrer dans le fichier de configuration du serveur les informations nécessaires pour qu'il se connecte à la base de données.
+La seconde étape de configuration a été de définir ce que l'on voulait mesurer sur chaque matériel physique et chaque environnement virtuel. Cette phase se fait par l'intermédiaire de l'interface web du serveur Zabbix. On choisit des _items_ qui représente une donnée à récupérer sur les agents, comme par exemple l'utilisation de la RAM. Puis, on leur définit le temps où entre deux mise à jour et la durée de sauvegarde dans la base de données avant leur suppression. Ensuite, avec ces items, on peut leur attribuer ou non des _triggers_. Ce sont un ou des conditions qui provoquent une alerte si cette condition est vérifiée. Par exemple, si l'utilisation de la RAM dépasse les 90% du total alors une alerte est déclenchée. Ces items sont aussi utilisables pour le calcul des SLAs.
+
+Dans la configuration de la solution qui était mise en place, les ordinateurs et leur mesure était enregistré statiquement par l'intermédiaire de l'application web. Dans un souci d'automatisation, Zabbix permet de rendre cela dynamique. Il suffit de renseigner dans le fichier de configuration de chaque agent une liste de _métadata_, de mots. Lors du lancement du service sur l'agent, un échange de requêtes a lieu avec le serveur. Celui-ci enregistre la machine dans la base de donnée avec son nom et son adresse IP. Puis il analyse les métadas et affecte à l'agent les items souhaités. Cette affectation est créée dans l'interface Web. Ce gain de temps pour l'inscription et la configuration des mesures souhaitées entre dans l'esprit DevOps.
+L'utilisation du logiciel Docker est l'une des nouveautés qu'à apporter cette culture dans notre infrastructure. Nous possédons plusieurs environnements "Dockerisé" qui n'étaient pas surveillé par l'ancien serveur Zabbix. Nous voulions un système qui mesure l'activité de nos envrionnements tout en évitant d'installer un agent dans le système d'exploitation CoreOS. Grâce à la communauté active, nous avons trouvé une fonctionnalité qui a pu contenter nos attentes. C'est un container Docker dans lequel, nous avons compilé un agent Zabbix et la fonctionnalité.
+
+A la fin de la phase de test, nous avons décider de remplacer le serveur existant par le nouveau. La migration s'est faite en deux partie. Pour commencer, nous avons installé le logiciel zabbix sur un nouvel environnement. Puis, il a suffit migrer le fichier de configuration et la configuration des items, triggers et sla dans le nouveau zabbix. la migration du serveur a été simple et rapide. En second, il a fallu modifier la configuration de chaque agent pour qu'ils aient les nouvelles informations à savoir, l'adresse IP du serveur ainsi que leurs métadatas.
+Une fois les modifications systèmes faites, nous avons pu ajuster les configurations sur les items ou les triggers pour avoir un assemblage serveur-agent efficace dans la surveillance et la mesure.
+
+== Apports et limites de cette nouvelle configuration
+
+
