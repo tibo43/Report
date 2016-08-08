@@ -1,8 +1,8 @@
-== Description du pôle CRCI
+=== Description du pôle CRCI
 
 Le Pôle du CRCI -Centre de Ressources et de Compétences Informatiques- est responsable de l'infrastructure système et réseaux, de la gestion du parc et des solutions et fourni une assistance sur certains points spécifiques. Son existence et son bon fonctionnement sont primordiaux dans l'entreprise. Trois collaborateurs constituent cette équipe, *Arnaud Roudsovsky*, responsable du pôle, *Frédéric Gracia* et *Romain Ballan*.
 
-Depuis 2015, l'entreprise a décidé de faire évoluer son infrastructure et ses méthodes de travail en s'appuyant sur le mouvement *DevOps*. Comme le présente le livre de Len Bass, Ingo Weber et Liming Zhu, DevOps est un ensemble de pratiques cherchant à réduire le temps entre la demande et la concréatisation d'une modification d'un système en production tout en assurant son bon fonctionnement [1]. Ce mouvement repose sur cinq piliers essentiels [2]:
+Depuis 2015, l'entreprise a décidé de faire évoluer son infrastructure et ses méthodes de travail en s'appuyant sur le mouvement _DevOps_. Comme le présente le livre de Len Bass, Ingo Weber et Liming Zhu, DevOps est un ensemble de pratiques cherchant à réduire le temps entre la demande et la concréatisation d'une modification d'un système en production tout en assurant son bon fonctionnement [1]. Ce mouvement repose sur cinq piliers essentiels [2]:
 
 * _Culture_ : changer l'organisation en silos par une organisation plate et collaborative.
 * _Automation_ -automatisation- : rendre autonome le déploiement des environnements de travail et de production.

@@ -1,11 +1,11 @@
-== SQLi Groupe
+=== SQLi Groupe
 
 SQLi Group est une entreprise de services du numérique (ESN) française foundée en 1990. Elle propose à ces clients une transformation digitale allant de la mise à disposition de nouveau moyen de communication jusqu'à la digitalisation complète de services. L'objectif de l'entreprise est de donner une nouvelle vision, combinant collaboration et innovation, à leur client.
 
 SQLI Group articule son objectif autour de trois offres managées par trois entités différentes :
 
-- La "Transformation Digital", conduit par _SQLi Consulting_, offre ses conseils pour faciliter et accélérer la transformation. 
+- La "Transformation Digital", conduit par _SQLi Consulting_, offre ses conseils pour faciliter et accélérer la transformation digital de ses clients. 
 
 - La "Performance Business" propose de nouveaux outils pour la communication, le marketing et la vente à ses clients. Cette évolution est guidée par _WAX Interactive_.
 
-- La "Performance Entreprise" pilote ses clients à définir, mettre en oeuvre et piloter sa transition digitale. _SQLi Enterprise_ mène cette dernière offre.
+- La "Performance Entreprise" pilote ses clients à définir, mettre en oeuvre et piloter leur transition digitale. _SQLi Enterprise_ mène cette dernière offre.
