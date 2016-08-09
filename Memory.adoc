@@ -17,6 +17,8 @@ include::ISC_France.adoc[]
 
 include::Pole_CRCI.adoc[]
 
+include::Infrastructure.adoc[]
+
 == Solution de surveillance et de mesure
 
 include::Zabbix.adoc[]

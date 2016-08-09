@@ -1,21 +1,14 @@
-Le apports de cette nouvelle configuration
-
-** Système efficace
-** tout est reporter (Switch, VM, Docker)
-** suppression non automatique
-** nouvel hôte lorsque le nom n'est pas le même
-
 === L'initiation du changement
 
-Depuis le troisième trimestre 2014, le pôle CRCI s'est doté d'un serveur _Zabbix_, un logiciel open source mesurant et surveillant l'infrastructure. Ce type d'application est très important pour les infogérants. Comme l'évoque l'article de  [10] ... .
+Depuis le troisième trimestre 2014, le pôle CRCI s'est doté d'un serveur _Zabbix_, un logiciel open source mesurant et surveillant l'infrastructure.
 Cependant, l'expansion de l'activité, l'évolution de l'infrastructure et la mise en place de bonne pratique en lien avec la culture DevOps ont conduit les ingénieurs du pôle à ne plus utiliser le logiciel. Il était devenu une tare de part ses alertes nombreuses, fréquentes et non importantes. A partir de ces reproches, nous avons décidé de repartir du commencement et un processus de mise en production s'est déroulé en deux étapes. Pour commencer, nous avons remis en cause le logiciel par la recherche de nouvelles solutions. Ensuite, un environnement de test a été créé avant de déployer l'outil et la configuration adéquat vers l'infrastructure. Enfin un bilan sera tiré de cette nouvelle configuration pour le pôle CRCI.
 
 === Remise en cause de la solution actuelle
 
 Pour débuter, notre première action a été de lister les objectifs actuels et futurs auxquels l'outil devra répondre.
 L'infrastructure d'ISC France héberge des applications web internes. Certaines sont primordiales pour la gestion quotidienne du travail des collaborateurs, d'autres facilitent la vie de l'entreprise. Le pôle CRCI doit pouvoir recevoir une alerte rapide lorsque l'application n'est pas accessible. La solution à envisager doit pouvoir simuler un scénario web comme un simple accès sur une page web ou une tentative de connexion.
-Le pôle CRCI doit rendre un rapport chaque semaine sur la disponibilité de l'infrastructure. *_SLAs_* [11]
-La mise en place de la culture DevOps a emmené l'utilisation, au sein de l'infrastructure, de l'outil Docker combiné au système d'exploitation _CoreOS_, système d'exploitation léger et adapté dans l'utilisation de cet outil [12]. La solution à choisir doit pouvoir surveiller ce genre d'environnement virtuel sans devoir installer de composant sur le système d'exploitation.
+Le pôle CRCI doit rendre un rapport chaque semaine sur la disponibilité de l'infrastructure. Comme l'évoque le papier scientifique de Pankesh Patel, Ajith H. Ranabahu et Amit P. Sheth [11], dans une infrastructure dite cloud computing, il est important de signer un accord de disponibilité de la plateforme entre les consommateurs et un prestataire. Dans le cas d'ISC France, les consommateurs sont le directeur, les managers et les directeurs de projet et les prestataires sont le pôle CRCI. Un _SLA_ -Service Level Agreement- a été négocié entre les deux parties pour rapporter la disponibilité des serveurs physiques.
+La mise en place de la culture DevOps a emmené l'utilisation, au sein de l'infrastructure, de l'outil Docker combiné au système d'exploitation _CoreOS_, système d'exploitation léger et adapté pour l'utilisation de cet outil comme l'indique Mathijs Jeroen Scheepers [12]. La solution à choisir doit pouvoir surveiller ce genre d'environnement virtuel sans devoir installer de composant sur le système d'exploitation.
 Cette mouvance qui est en train de s'installer dans l'entreprise doit pousser les équipes de développement à quantifier les ressources matérielles utilisées par leurs programmes. L'outil doit donc pouvoir fournir des graphes et des valeurs lisibles et compréhensible à des non-initiés à l'infogérance.
 
 A partir de cette liste, nous avons pu nous mettre à la recherche d'un logiciel remplissant ces conditions. Il existe de nombreuses offres sur le marché. Néanmoins, très peu d'entre elles répondent entièrement à nos attentes. Notre choix s'est donc porté sur la solution que nous utilisions, Zabbix, pour plusieurs raison.
@@ -40,9 +33,14 @@ La seconde étape de configuration a été de définir ce que l'on voulait mesur
 Dans la configuration de la solution qui était mise en place, les ordinateurs et leur mesure était enregistré statiquement par l'intermédiaire de l'application web. Dans un souci d'automatisation, Zabbix permet de rendre cela dynamique. Il suffit de renseigner dans le fichier de configuration de chaque agent une liste de _métadata_, de mots. Lors du lancement du service sur l'agent, un échange de requêtes a lieu avec le serveur. Celui-ci enregistre la machine dans la base de donnée avec son nom et son adresse IP. Puis il analyse les métadas et affecte à l'agent les items souhaités. Cette affectation est créée dans l'interface Web. Ce gain de temps pour l'inscription et la configuration des mesures souhaitées entre dans l'esprit DevOps.
 L'utilisation du logiciel Docker est l'une des nouveautés qu'à apporter cette culture dans notre infrastructure. Nous possédons plusieurs environnements "Dockerisé" qui n'étaient pas surveillé par l'ancien serveur Zabbix. Nous voulions un système qui mesure l'activité de nos envrionnements tout en évitant d'installer un agent dans le système d'exploitation CoreOS. Grâce à la communauté active, nous avons trouvé une fonctionnalité qui a pu contenter nos attentes. C'est un container Docker dans lequel, nous avons compilé un agent Zabbix et la fonctionnalité.
 
-A la fin de la phase de test, nous avons décider de remplacer le serveur existant par le nouveau. La migration s'est faite en deux partie. Pour commencer, nous avons installé le logiciel zabbix sur un nouvel environnement. Puis, il a suffit migrer le fichier de configuration et la configuration des items, triggers et sla dans le nouveau zabbix. la migration du serveur a été simple et rapide. En second, il a fallu modifier la configuration de chaque agent pour qu'ils aient les nouvelles informations à savoir, l'adresse IP du serveur ainsi que leurs métadatas.
-Une fois les modifications systèmes faites, nous avons pu ajuster les configurations sur les items ou les triggers pour avoir un assemblage serveur-agent efficace dans la surveillance et la mesure.
+A la fin de la phase de test, nous avons décider de remplacer le serveur existant par le nouveau. La migration s'est faite en deux partie. Pour commencer, nous avons installé le logiciel serveur sur un nouvel environnement. Puis, il a suffit migrer le fichier de configuration et la configuration des mesures du serveur de test vers celui en production. Dans un second temps, il a fallu modifier la configuration de chaque agent pour qu'ils aient leurs nouvelles informations. Pour cette phase, un outil d'automatisation sera a été utilisé. Il sera exposé dans le prochain chapitre.
 
 === Apports et limites de cette nouvelle configuration
 
+Après la mise en production du nouveau serveur de surveillance et la migration des machines surveillées, les mesures récupérées ont été instantanées. A partir de ce moment, on a pu ajuster certaines mesures et alertes jugées sans intérêts et en ajouter de nouvelles.
 
+Les apports de cette nouvelle configuration sont importants et primordiaux pour le pôle CRCI. Pour commencer, les alertes reçues en cas de problème sur les environnements surveillés sont précises ce qui nous permet d'intervenir rapidement et efficacement.
+Ensuite, les mesures effectuées sur l'infrastructure nous donnent la capacité de suivre leur consommation efficacement. Cette avantage nous offre la possibilité d'optimiser le réseau et chaque machine virtuelle.
+Enfin, pouvoir monitorer les environnements virtuels sous Docker est un plus pour l'évolution et la popularité de ce système dans notre infrastructure.
+
+Malgré tout, le logiciel Zabbix n'est pas un outil dynamique dans son évolution. Sa principale limite est le temps à consacrer dans la configuration des mesures et des alertes. L'évolution de notre infrastructure nous amènera à explorer de nouveaux systèmes. Il faudra trouver des créneaux pour effectuer une veille technologique autour de cette outil. Garder notre serveur de surveillance en adéquation avec notre système est primordial pour la bonne santé de celui-ci.

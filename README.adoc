@@ -12,6 +12,8 @@ Equipe? Travail?
 
 Mouvance devops et lien étroit avec pôle Expertise
 
+== Description de l'infrastructure
+
 Infrastructure Actuelle => Infrastructure Future?
 
 Problèmatique?
@@ -55,10 +57,13 @@ Conclusion sur le sujet
 
 - Expliquer utilisation Windows et Linux.
 
-== Scripting nombre de VM
+= Annexes
 
-- Infrastructure actuelle hétérogène (VMWare + Openstack)
 
-- Besoin de connaitre l'étendue des VM et leur
-
-- Création de 3 scripts Python (ESXi 5.0, 5.5, Openstack)
+Virtualisation
+Openstack
+Containerisation
+Docker
+SNMP
+Zabbix
+Ansible

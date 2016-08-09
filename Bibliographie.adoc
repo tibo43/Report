@@ -30,8 +30,10 @@ http://www.linuxjournal.com/content/docker-lightweight-linux-containers-consiste
 
 [10] TROUVER ARTICLE SUR LES BIEN FAIT DU MONITORING
 
-[11] SLA et pourquoi.
+[11] Pankesh Patel, Ajith H. Ranabahu, Amit P. Sheth: _Service Level Agreement in Cloud Computing_
+http://corescholar.libraries.wright.edu/cgi/viewcontent.cgi?article=1077&amp;context=knoesis
 
-[12] CoreOS + Docker
+[12] Mathijs Jeroen Scheepers: _Virtualization and Containerization of Application Infrastructure: A Comparison_
+http://referaat.cs.utwente.nl/conference/21/paper/7449/virtualization-andcontainerization-of-application-infrastructure-a-comparison.pdf
 
 [13] SNMP
