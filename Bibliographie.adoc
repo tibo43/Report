@@ -1,5 +1,3 @@
-= Bibliographie
-
 [1] Len Bass, Ingo Weber, Liming Zhu: _DevOps: A Software Architect's Perspective_
 https://books.google.com.br/books?hl=fr&lr=&id=fcwkCQAAQBAJ&oi=fnd&pg=PT13&dq=devops&ots=KQAoo9OSXc&sig=OlWvAETe04w20bk6j4fWQ8S4Nrs#v=onepage&q=devops&f=false
 

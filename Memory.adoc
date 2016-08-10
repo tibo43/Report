@@ -1,35 +1,57 @@
 = Evolution de la plateforme de supervision et optimisation du réseau
-
-
-:toc: left
+Thibaut Fabre <fabre.thibaut@gmail.com>
+v1.0, 2016-08-10
+:toc:
 :toclevels: 3
 :toc-title: Sommaire
 :sectnums:
 
+= Remerciements
+
+include::Remerciements.adoc[]
+
+<<<
+
+= Glossaire
+
+include::Glossaire.adoc[]
+
+<<<
 
 == Contexte Industriel
 
 include::SQLi_Groupe.adoc[]
 
-=== Courte description de ISC France
-
 include::ISC_France.adoc[]
+
+<<<
 
 include::Pole_CRCI.adoc[]
 
+<<<
+
 include::Infrastructure.adoc[]
+
+<<<
 
 == Solution de surveillance et de mesure
 
 include::Zabbix.adoc[]
 
-== Activitité Annexe
+<<<
 
-=== Scripting installation + configuration Agent et utilisation Ansible
+== Solution d'automatisation d'un gestionnaire de configuration
 
 include::Ansible.adoc[]
 
-=== Scripting nombre de VM
+<<<
 
-include::Report.adoc[]
+= Bibliographie
 
+include::Bibliographie.adoc[]
+
+<<<
+
+= Annexes
+
+include::Annexes.adoc[]
