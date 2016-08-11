@@ -41,29 +41,22 @@ Etape 2 : phase de test et mise en production
 
 Conclusion sur le sujet
 
-= Activitité Annexe
+= Ansible
 
-== Scripting installation + configuration Agent + Utilisation Ansible
+Recherche de la solution
 
-- Besoin de déployer rapidement et efficacement l'Agent (Automatisation)
+Mise en place:
+* installation et utilisation en test
+* Création scripts
 
-- Script batch pour windows
-
-- Script python pour linux (Nova_Hostname)
-
-- En l'état les VM ont une version possiblement pas à jour et une mauvaise configuration
-
-- L'outil permet de pousser et d'exécuter des Script à un nombre de VM de masse
-
-- Expliquer utilisation Windows et Linux.
+Conclusion du sujet
 
 = Annexes
 
-
-Virtualisation
-Openstack
-Containerisation
-Docker
-SNMP
-Zabbix
-Ansible
+* Virtualisation
+* Openstack
+* Containerisation
+* Docker
+* SNMP
+* Zabbix
+* Ansible

@@ -1,9 +1,8 @@
 === Pôle CRCI
 
-Le Pôle du CRCI -Centre de Ressources et de Compétences Informatiques- est responsable de l'infrastructure système et réseaux, de la gestion du parc et des solutions logicielles et fourni une assistance sur certains points spécifiques. Trois collaborateurs constituent l'équipe du pôle de Bordeaux, *Arnaud Roudsovsky*, responsable du pôle, *Frédéric Gracia* et *Romain Ballan*. Son existence et son bon fonctionnement sont primordiaux pour l'entité.
-
-centre de service donc infra ++
-
+Le Pôle du CRCI -Centre de Ressources et de Compétences Informatiques- est responsable de l'infrastructure système et réseaux, de la gestion du parc et des solutions logicielles et fourni une assistance sur certains points spécifiques.
+Trois collaborateurs constituent l'équipe du pôle de Bordeaux, *Arnaud Roudsovsky*, responsable du pôle, *Frédéric Gracia* et *Romain Ballan*. Ils interviennent essentiellement sur le site de Bordeaux. Néanmoins, ils coordonnent l'infrastructure de l'entité de Nantes avec l'aide du pôle CRCI distant.
+Comme expliqué précédemment, ISC France possède une infrastructure conséquente et fondatrice de son travail. Le coeur du business de l'entreprise dépend du bon fonctionnement de l'infrastructure. Le pôle CRCI est un élément primordial de la bonne santé financière de l'entité.
 
 Depuis 2015, l'entreprise a décidé de faire évoluer son infrastructure et ses méthodes de travail en s'appuyant sur le mouvement _DevOps_. Comme le présente le livre de Len Bass, Ingo Weber et Liming Zhu, DevOps est un ensemble de pratiques cherchant à réduire le temps entre la demande et la concréatisation d'une modification d'un système en production tout en assurant son bon fonctionnement [1]. Ce mouvement repose sur cinq piliers essentiels comme l'énonce Joonas Hamunen dans son document [2]:
 
@@ -18,7 +17,10 @@ Il symbolise le thème émergeant de cette culture, à savoir l'étroite collabo
 
 Au sein d'ISC France, cette culture est poussée par le pôle CRCI et le pôle Expertise.
 Ce dernier est le garant de la qualité technique des projets de part un support technique, la dispense de formations et la mise en place de bonne pratique à exécuter par les développeurs.
-Dans la culture DevOps, les experts sont, notamment, responsables de la mise en place et de la maintenance des outils de production tel que la Plateforme d'Intégration Continue.
+Dans la culture DevOps, les experts sont, notamment, responsables de la mise en place et de la maintenance des outils de production tel que les plateformes d'intégration continue.
 Le _Continuous Delivery_ est une approche de développement en lien avec la mouvance DevOps.
 Il a pour but de développer, de tester et de sortir des versions de façon rapide et répeter jusqu'à avoir un logiciel de haute qualité [3].
 En plus d'insuffler aux développeurs la culture DevOps, le pôle expertise est le lien entre les équipes de production et le pôle CRCI dans le calcul quantitatif des ressources utiles au bon déroulement des projets et la qualité des environnements de développement fournis à chaque développeur.
+
+Les pôles CRCI et expertise travaille ensemble pour donner à l'entité les moyens d'avoir une infrastructure de type _cloud computing_. C'est un nouveau _paradigme_ qui a pour objectif de...
+Dans cette collaboration, l'expertise s'occupent d'administrer le gestionnaire de version privée à l'entité, _GitLab_, et les plateforme d'intégration continue. Quand aux pôle CRCI, son rôle est d'administrer et de faire évoluer l'infrastructure.

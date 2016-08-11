@@ -1,0 +1,11 @@
+=== Recherche de la solution adaptée
+
+La problématique concernant le changement de configuration des agents Zabbix déjà en place sur le réseau a été l'élément déclencheur de cette recherche. Il y avait plus de cent configuration à modifier avec un nombre important d'action commune à effectuer. Nous avons souhaité automatiser et rationnaliser, notions importantes de la mouvance DevOps. Les solutions de gestion de configuration sont des outils puissants puisqu'ils offrent la possibilité de copier des scripts et de les exécuter en parallèle sur un nombre illimité d'ordinateurs. Pour nous, l'outil doit posséder une installation légère, être simple dans sa configuration de requêtes et pouvoir gérer les environnements Linux et Windows.
+ +
+Les recherches nous ont amené à choisir _Ansible_, solution open source. Nous avons été motivé par plusieurs points. Premièrement, c'est un logiciel dit "agentless", ça signifie que l'outil n'a besoin que d'un serveur pour effectuer la gestion. Le réputées solutions _Chef_ et _Puppet_ utilisent un serveur et des agents sur chaque noeud à gérer, comme le logiciel Zabbix. Ensuite, Ansible utilise _YAML_, un format de représentation des données que nous utilisons déjà, et peut gérer plusieurs environnements. Enfin, cette solution est gratuite pour l'utilisation que nous souhaitons.
+
+=== Mise en place
+
+
+
+=== Apports et limites de l'outil

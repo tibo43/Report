@@ -1,3 +1,15 @@
+ESN::
+Definition
+
+DevOps::
+Définition
+
+Continuous Delivery::
+Définition
+
+Paradigme::
+Définition
+
 Virtualisation::
 Definition
 
@@ -18,3 +30,6 @@ Definition
 
 Ansible::
 Definition
+
+YAML::
+Définition

@@ -40,7 +40,7 @@ include::Zabbix.adoc[]
 
 <<<
 
-== Solution d'automatisation d'un gestionnaire de configuration
+== Solution de gestion des configurations
 
 include::Ansible.adoc[]
 
