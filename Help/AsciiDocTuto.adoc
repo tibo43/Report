@@ -6,7 +6,7 @@ v1.0, 2016-02-25
 :toclevels: 5
 :numbered:
 :sectlinks:
-:imagesdir: 000_FOR_ASCIIDOC/
+:imagesdir: SourcesAsciiDocTuto/
 :revealjs_theme: sqlislide
 :revealjs_slideNumber: true
 :revealjs_parallaxBackgroundImage: reveal.js/css/theme/image/fondnoir.jpg
@@ -22,7 +22,7 @@ Ce document sert de support à la formation Asciidoc.
 
 :leveloffset: 1
 
-include::000_FOR_ASCIIDOC/010_FOR_OUTILS_ASCIIDOC.adoc[]
+include::SourcesAsciiDocTuto/010_FOR_OUTILS_ASCIIDOC.adoc[]
 
 :leveloffset: 0
 
@@ -31,7 +31,7 @@ include::000_FOR_ASCIIDOC/010_FOR_OUTILS_ASCIIDOC.adoc[]
 
 :leveloffset: 1
 
-include::000_FOR_ASCIIDOC/020_FOR_WORKDIR.adoc[]
+include::SourcesAsciiDocTuto/020_FOR_WORKDIR.adoc[]
 
 :leveloffset: 0
 
@@ -40,6 +40,6 @@ include::000_FOR_ASCIIDOC/020_FOR_WORKDIR.adoc[]
 
 :leveloffset: 1
 
-include::000_FOR_ASCIIDOC/030_FOR_ECRIRE_EN_ASCIIDOC.adoc[]
+include::SourcesAsciiDocTuto/030_FOR_ECRIRE_EN_ASCIIDOC.adoc[]
 
 :leveloffset: 0

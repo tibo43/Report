@@ -1,0 +1,204 @@
+:experimental:
+== Bien préparer son espace de travail
+
+[IMPORTANT.speaker]
+====
+Il est surement prévu qu'un script face ce travail.
+Mais il est tout de fois conseille de lire les explications afin de bien comprendre les principes.
+====
+
+. Créer votre premier fichier Asciidoc en respectant la convention suivante:
+
+000_FOR_XXX.adoc::
+
+`000`;; Indique que c'est votre fichier racine, c'est-à-dire qu'il contiendra seulement les informations principales sur le fichier.
+
+`_`;; Utilisez les "underscores" à la place des espaces. Cela vous évitera de nombreux problèmes entre Windows et Linux.
+
+`FOR`;; Pour *Formation*. Vous pouvez utiliser les autres acronymes ci-dessous, cela permet de rapidement déterminer l'objet/cible du document.
++
+[TIP]
+====
+[horizontal]
+FOR:: Formation
+CR:: Compte rendu
+US:: User Story
++
+etc..
+====
+
+`XXX`;; Ici, vous pouvez mettre ce que vous voulez, mais encore une fois il est conseiller de tout mettre en majuscules afin d'éviter les problèmes d'encodage avec les accents.
+
+. Créer un dossier avec le même nom que le fichier.
+
+000_FOR_XXX/::
+Cela vous permettra de rapidement repérer où sont vos fichiers ressources, tel que les images, les schémas et ainsi que vos documents Asciidoc.
+
+. Dans le *dossier* `000_FOR_XXX/`, créer les dossiers suivants:
+
+images/::
+Ce dossier contiendra *toutes* vos images liées avec vos documents Asciidoc.
+Ainsi que les images générées par vos schémas.
+
+shemas/::
+Ce dossier contiendra vos schémas, c'est-à-dire tout élément graphique vous servant dans un document Asciidoc.
+Peu importe l'outil que vous utilisez, un fichier au format image devra être mis dans le dossier `images/`.
+En effet, il vous sera parfois possible de mettre directement vos schémas dans vos documents Asciidoc, *ne le faites pas s'il vous plait*.
+Il y a de fortes chances, lors de la génération en PDF, HTML ou SLIDE, que ça ne fonctionne pas.
+
+. Créer vos fichiers Asciidoc de la même manière que la partie 1, sauf pour:
+
+`000`::
+Il est déjà utilisé par votre premier fichier que vous avez créé.
+
+`01X`::
+Utilisez l'incrémentation, de cette manière vos documents Asciidoc seront classés.
+Les deux premiers chiffres (à partir de la gauche) sont réservés pour ça (ex: `020`, `110`, `XX0`).
+
+`XX1`::
+Quant au dernier chiffre, il vous permet d'ajouter un autre document Asciidoc en cas de besoin et de garder l'ordre sans avoir à tout modifier.
+
+== Bien préparer ses documents Asciidoc
+
+. Pour le document `000_FOR_XXX.adoc`:
+
+Le titre::
+  Un document Asciidoc ne contient qu'un seul titre, cela peut paraître logique, mais vous comprendrez que pour la suite c'est important.
++
+.Voici comment l'écrire:
+....
+  = Votre titre
+....
+
+Les attributs::
+Ils ne sont pas visibles une fois le document Asciidoc généré, mais consituent la partie la plus importante de votre document (en particulier lors de la génération des slides).
++
+.Voici les attributs minimums à mettre:
+....
+= Votre titre <-- Les attributs se mettent juste en dessous du titre.
+Matthieu David <mdavid@sqli.com>
+V0.1.0 - 09/03/2016
+:toc:
+:toc: preamble
+:toc-title: Table des matières
+:toclevels: 5
+:numbered:
+:sectlinks:
+:imagesdir: 000_FOR_XXX/
+:revealjs_theme: sqlislide
+:revealjs_slideNumber: true
+:revealjs_parallaxBackgroundImage: reveal.js/css/theme/image/fondnoir.jpg
+:revealjs_parallaxBackgroundSize: cover
+....
+
+Les sections::
+
+Votre document racine contient les sections  principales.
+Leur titre fait référence au nom du document Asciidoc qui servira à écrire le contenu de la section.
++
+.Voici comment inclure un fichier dans une section:
+....
+[data-background="reveal.js/css/theme/image/fondmarron.jpg"]
+== Les outils pour faire de l'Asciidoc
+
+:leveloffset: 1
+
+ include::000_FOR_ASCIIDOC/010_FOR_OUTILS_ASCIIDOC.adoc[]
+
+:leveloffset: 0
+....
+
+. Pour les documents Asciidoc inclus:
+
+Le titre::
+
+Il y en a tout simplement pas. Votre document est voué à être inclus quelque part, et comme dit précédemment il ne peut y avoir qu'un seul titre.
+
+Les attributs::
+
+Ici aussi, il n'y en a pas besoin (sauf cas particulier). Tout est déjà dans le document principal. On se concentre juste sur le contenu.
+
+Les sections::
+
+Deux cas se présentes:
+* Si vous souhaitez générer seulement un document *PDF* ou *HTML*: libre à vous d'organiser vos sections.
+* Si vous souhaitez générer des *SLIDES*, il vous faudra rester sur le même niveau de section (==). Plus d'informations dans la partie suivante.
++
+.Premier cas (PDF, HTML):
+....
+== Section niveau 1  /* Une section de niveau 0 (=) correspond au titre */
+=== Section niveau 2
+==== Section niveau 3
+== Section niveau 1
+....
++
+.Second cas (SLIDES):
+....
+== Section niveau 1
+== Section niveau 1
+== Section niveau 1
+....
+
+== Ce qu'il faut savoir pour les SLIDES
+
+Les attribus::
+
+Dans la section précédente vous avez surement remarqué des attributs du style `:reveal.js_xxx:`.
+Ils servent à configurer les slides. Vous trouverez la liste complète à cette adresse: http://asciidoctor.org/docs/install-and-use-revealjs-backend/
+
+Les sections::
+
+Reveal.js fonctionne avec des slides organisées en tableau.
+Par exemple, les sections de niveau 1 (==) seront tous positionné sur la ligne du haut.
+Quant aux sections de niveau 2 (===), elles seront respectivement placées verticalement sous leur section parent (==).
++
+[WARNING]
+====
+Une section de niveau 3 (====) ne fonctionnera pas et tout ce qui suit ne sera pas visible sur la présentation.
+====
++
+[TIP]
+====
+Dans le document racine, on utilise `:leveloffset: x`. Cela permet de décaler le niveau des sections. De ce fait, vous n'avez qu'à mettre des sections de niveau 1 (==) partout.
+Il faut juste retenir que le document racine constitue vos slides en haut du tableau et que chaque document inclus correspond aux slides verticales.
+====
+
+Le contenu des sections::
+
+Le texte;; Une slide peut contenir environ 10 lignes.
+Les images;; Une slide peut contenir, sans texte, une image de dimension 800x600.
+Les annotations:: Les icônes ne sont pas (pour le moment) visibles sur les slide. De plus, vous pouvez vous en servir pour faire des notes pour le mode présentateur.
++
+....
+[NOTE.speaker]
+====
+Actually things aren't that bad
+====
+....
+
+Les touches clavier::
++
+|===
+|Touches clavier |Description
+
+|kbd:[F11] ou kbd:[F]
+|Activer le plein écran
+
+|kbd:[HAUT], kbd:[BAS], kbd:[GAUCHE], kbd:[DROITE]
+|Se déplacer dans les slides
+
+|kbd:[ESPACE] ou kbd:[N]
+|Passer à la slide suivante
+
+|kbd:[P]
+|Retourner à la slide précédente
+
+|kbd:[O] ou kbd:[ECHAP]
+|Activer / Désactiver la vue d'ensemble
+
+|kbd:[;] ou kbd:[B]
+|Activer / Désactiver l'écran noir
+
+|kbd:[S]
+|Activer le mode présentateur
+|===

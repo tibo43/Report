@@ -1,0 +1,19 @@
+@startuml
+abstract class AbstractList
+abstract AbstractCollection
+
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+  Object[] elementData
+  size()
+}
+
+enum TimeUnit {
+  DAYS
+  HOURS
+  MINUTES
+}
+annotation SuppressWarnings
+@enduml

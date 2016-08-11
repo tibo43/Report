@@ -1,0 +1,617 @@
+== Les paragraphes
+
+=== Paragraphe normal
+====
+Ceci est un paragraphe normal.
+Sans retour à la ligne.
+
+Sauf si on laisse un saut de ligne entre le texte.
+Ce qui donne un second paragraphe.
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+Ceci est un paragraphe normal.
+Sans retour à la ligne.
+
+Sauf si on laisse un saut de ligne entre le texte.
+Ce qui donne un second paragraphe.
+....
+
+=== Retour à la ligne
+
+====
+Ceci est un retour... +
+à la ligne suivante,
+et uniquement pour une ligne.
+
+
+[%hardbreaks]
+Ceci est un retour...
+à la ligne suivante,
+et qui fonctionne sur toutes les lignes du paragraphe.
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+Ceci est un retour... +
+à la ligne suivante,
+et uniquement pour une ligne.
+
+[%hardbreaks]
+Ceci est un retour...
+à la ligne suivante,
+et qui fonctionne sur toutes les lignes du paragraphe.
+....
+
+=== Annotations
+
+NOTE: Ceci est une annotation de type: NOTE
+
+TIP: Ceci est une annotation de type: TIP
+
+IMPORTANT: Ceci est une annotation de type: IMPORTANT
+
+WARNING: Ceci est une annotation de type: WARNING
+
+CAUTION: Ceci est une annotation de type: CAUTION
+
+[NOTE]
+====
+Voici un bloc d'annotation. +
+
+Très utile pour y faire de la mise en forme.
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+NOTE: Ceci est une annotation de type: NOTE
+
+TIP: Ceci est une annotation de type: TIP
+
+IMPORTANT: Ceci est une annotation de type: IMPORTANT
+
+WARNING: Ceci est une annotation de type: WARNING
+
+CAUTION: Ceci est une annotation de type: CAUTION
+
+[NOTE]
+====
+Voici un bloc d'annotation. +
+
+Très utile pour y faire de la mise en forme.
+====
+....
+
+== Formatter son texte
+
+=== Gras et italique
+
+====
+_Une phrase en italique._ +
+Fonc__tion__ne a__uss__i pour _les_ le__tt__res.
+
+*Une phrase en gras*. +
+Fonc**tion**ne a**uss**i pour *les* le**tt**res.
+
+*_On peut très bien combiner les deux_*. +
+Fonc**__tion__**ne a**__uss__**i pour *_les_* le**__tt__**res.
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+_Une phrase en italique._ +
+Fonc__tion__ne a__uss__i pour _les_ le__tt__res.
+
+*Une phrase en gras*. +
+Fonc**tion**ne a**uss**i pour *les* le**tt**res.
+
+*_On peut très bien combiner les deux_*. +
+Fonc**__tion__**ne a**__uss__**i pour *_les_* le**__tt__**res.
+....
+
+=== Surligner, petit texte et gros texte
+
+====
+#Voici un texte surligné#
+
+Et un texte [small]#plus petit#.
+
+Ou [big]#plus gros#.
+
+Fonc##tion##ne a[small]##uss##i pour les le[big]##tt##res.
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+#Voici un texte surligné#
+
+Et un texte [small]#plus petit#.
+
+Ou [big]#plus gros#.
+
+Fonc##tion##ne a[small]##uss##i pour les le[big]##tt##res.
+....
+
+=== Indices et exopsants
+
+====
+Voici un texte avec un mot en ~indice~.
+
+Voici un texte avec un mot en ^exposant^.
+
+On peut aussi les combiner si besoin : ^e~x^p~o~s^a~nt^
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+Voici un texte avec un mot en ~indice~.
+
+Voici un texte avec un mot en ^exposant^.
+
+On peut aussi les combiner si besoin : ^e~x^p~o~s^a~nt^
+....
+
+NOTE: Vous remarquerez que cette fois, il n'est pas nécessaire de doubler le signe lorsqu'il se situe entre les lettres. Contrairement aux précédents exemples.
+
+=== Quotations et apostrophes
+
+====
+'`Une cotation simple`'
+
+"`Une cotation double`"
+
+Et l'utilisation de l'apostrophe.
+
+Un petit exemple en anglais pour montrer comment l'utiliser au début ou à la fin d'un mot : +
+All of the werewolves`' desks were a mess. Olaf had been with the company since the `'60s.
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+'`Une cotation simple`'
+
+"`Une cotation double`"
+
+Et l'utilisation de l'apostrophe.
+
+Un petit exemple en anglais pour montrer comment l'utiliser au début ou à la fin d'un mot : +
+All of the werewolves`' desks were a mess. Olaf had been with the company since the `'60s.
+....
+
+== Les entêtes de document
+
+=== Titre, auteur et version du document
+
+NOTE: Comme ces éléments ne sont pas directement visibles dans le document, seule la syntaxe est d'écrite. Si vous regardez ce document en Asciidoc, ces éléments sont présents au début de celui-ci.
+
+[WARNING]
+====
+* Les entêtes sont facultatifs.
+* Ils ne doivent pas contenir les lignes blanches (un seul paragraphe). +
+* Le numéro de version est forcément accompagné de l'auteur.
+====
+
+TIP: Il est possible d'avoir plusieurs auteurs. Pour cela, il faut les séparer avec un point-virgule (;).
+
+.Voici comment l'écrire en Asciidoc:
+....
+= Le titre de mon document
+M. David <mdavid@sqli.com> ; Second Auteur ; ....
+v1.0, 2016-02-25
+....
+
+=== Document avec attributs
+
+....
+= Le titre de mon document
+M. David <mdavid@sqli.com>
+v1.0, 2016-02-25
+:toc:
+:imagedir: assets/images
+:homaepage: http://asciidoctor.org
+....
+
+== Les section et les titres
+
+NOTE: Afin de ne pas modifier la structure du document, il n'y a pas d'exemples pour les sections. Mais vous pouvez voir le rendu sur ce document: ce sont les titres en rouge.
+
+.Voici comment l'écrire en Asciidoc:
+....
+= Titre du document (Niveau 0)
+
+== Titre de section de niveau 1
+
+=== Titre de section de niveau 2
+
+==== Titre de section de niveau 3
+
+===== Titre de section de niveau 4
+
+====== Titre de section de niveau 5
+
+== Un autre titre de section de niveau 1
+
+[[id-de-la-section]]
+== Un titre de section de niveau 1 avec un id
+....
+
+WARNING: Attention, le titre du document de niveau 0 peut être présent une seule fois dans le document. Donc si un entête est présente, c'est à cet endroit qu'il faut le mettre. Cf: <<Les entêtes de document>>.
+
+[TIP]
+====
+Il est possible d'activer les liens sur les sections. Pour cela deux attributs, à mettre en entête, existent: +
+
+* `:sectanchors:` Lorsque cet attribut de document est défini , une ancre de section (icône) apparaît devant le titre de la section .
+
+* `:sectlinks:` Lorsque cet attribut de document  est défini , les titres de section deviennent des liens, mais sans icône.
+====
+
+== Inclure un fichier
+
+=== Inclure une partie du document
+
+Si vous travaillez sur un gros document ou si vous ne souhaitez pas dupliquer votre travail, il est tout à fait possible de le diviser en plusieurs fichiers .adoc. Il ne vous restera plus qu'à rassembler les différentes parties de la manière suivante:
+
+....
+ include::document_1.adoc[]
+....
+
+=== Inclure à partir d'une URL
+
+NOTE: La première ligne ci-dessous contient `:asciidoctor-source:`. Il faut donc mettre le lien dans les entêtes du document.De plus, attention à ce que le nom entre les deux points ne soit pas déjà utilisé par la syntaxe Asciidoc.
+
+....
+ :asciidoctor-source: https://raw.githubusercontent.com/asciidoctor/asciidoctor/master
+
+ include::{asciidoctor-source}/README.adoc[]
+....
+
+[IMPORTANT]
+====
+Inclure une source externe inclut des risques. Il est donc possible, suivant l'outil utilisé, que cette fonctionnalité soit bloquée par défaut. Si c'est le cas, il vous suffit d'ajouter `:allow-uri-read:` dans les entêtes.
+====
+
+== Ligne horizontale et saut de page
+
+=== Ligne horizontale de séparation
+
+====
+Voici une ligne horizontale.
+
+'''
+
+Un autre paragraphe.
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+Voici une ligne horizontale.
+
+'''
+
+Un autre paragraphe.
+....
+
+=== Saut de page
+
+NOTE: Ici aussi, il n'y a pas d'exemple afin de ne pas modifier la structure du document.
+
+.Voici comment l'écrire en Asciidoc:
+....
+Voici paragraphe dans une page.
+
+<<<
+
+Un autre paragraphe dans une autre page.
+....
+
+== Les listes
+
+=== Liste basique, sans numérotation
+
+====
+* Liste de niveau 1
+** Liste de niveau 2
+*** Liste de niveau 3
+**** Liste de niveau 4
+***** Liste de niveau 5
+* Liste de niveau 1
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+* Liste de niveau 1
+** Liste de niveau 2
+*** Liste de niveau 3
+**** Liste de niveau 4
+***** Liste de niveau 5
+* Liste de niveau 1
+....
+
+[TIP]
+====
+Il est aussi possible de modifier la forme de la puce. Pour cela il suffit d'ajouter l'élément suivant juste avant la liste `[type_de_puce]`. Voici les différents types possibles:
+
+[square]
+* square (carré vide)
+
+[circle]
+* circle (cercle vide)
+
+[disc]
+* disc (cercle plein)
+
+[none]
+* none (sans puce)
+
+[unstyled]
+* unstyled (sans indentation et sans puce)
+====
+
+=== Checklist
+
+====
+- [*] coché
+- [x] aussi coché
+- [ ] non coché
+- sans case à cocher
+
+
+[options=interactive]
+- [*] coché
+- [x] aussi coché
+- [ ] non coché
+- sans case à cocher
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+
+- [*] coché
+- [x] aussi coché
+- [ ] non coché
+- sans case à cocher
+
+[options=interactive]
+- [*] coché
+- [x] aussi coché
+- [ ] non coché
+- sans case à cocher
+....
+
+=== Liste numérotée
+
+====
+. Etape 1 (niveau 1)
+.. Etape 1.a (niveau 2)
+... Etape 1.a.i (niveau 3)
+.... Etape 1.a.i.A (niveau 4)
+..... Etape 1.a.i.A.I (niveau 5)
+. Etape 2
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+. Etape 1 (niveau 1)
+.. Etape 1.a (niveau 2)
+... Etape 1.a.i (niveau 3)
+.... Etape 1.a.i.A (niveau 4)
+..... Etape 1.a.i.A.I (niveau 5)
+. Etape 2
+....
+
+[NOTE]
+====
+Comme pour les listes normales, il est possible de modifier le style de numérotation. Voici les différents types possibles:
+
+[arabic]
+. arabic (par défaut)
+
+[decimal]
+. decimal
+
+[loweralpha]
+. loweralpha
+
+[upperalpha]
+. upperalpha
+
+[lowerroman]
+. lowerroman
+
+[upperroman]
+. upperroman
+
+[lowergreek]
+. lowergreek
+====
+
+=== Phrase avec label / Liste de définition
+
+====
+Premier item:: définition du premier item
+Second item:: définition du second item
+Troisième item::
+définition du troisième item
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+Premier item:: définition du premier item
+Second item:: définition du second item
+Troisième item::
+définition du troisième item
+....
+
+=== Questions & Réponse / Liste de définition numérotée
+
+====
+[qanda]
+Qu'est-ce que c'est Asciidoctor?::
+Une implémentation du processeur AsciiDoc en Ruby.
+Quelle est la réponse à la question ultime?:: 42
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+[qanda]
+Qu'est-ce que c'est Asciidoctor?::
+Une implémentation du processeur AsciiDoc en Ruby.
+Quelle est la réponse à la question ultime?:: 42
+....
+
+TIP: Il faut savoir qu'il est possible de combiner toutes les sortes de listes, un peu comme pour le texte en gras, italique, etc...
+
+== Les Liens
+
+===  Liens externes / URL
+
+====
+http://asciidoctor.org - automatique!
+
+http://asciidoctor.org[Asciidoctor]
+
+https://github.com/asciidoctor[Asciidoctor @ *GitHub*]
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+http://asciidoctor.org - automatique!
+
+http://asciidoctor.org[Asciidoctor]
+
+https://github.com/asciidoctor[Asciidoctor @ *GitHub*]
+....
+
+===  Liens avec espace et caractères spéciaux
+
+====
+link:++http://example.org/?q=[a b]++[URL avec des espaces]
+
+link:http://example.org/?q=%5Ba%20b%5D[URL avec des caractères spéciaux]
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+link:++http://example.org/?q=[a b]++[URL avec des espaces]
+
+link:http://example.org/?q=%5Ba%20b%5D[URL avec des caractères spéciaux]
+....
+
+=== Liens vers un chemin Windows / Chemin relatif
+
+====
+link:\\server\share\whitepaper.pdf[Livre Blanc (Chemin vers un serveur windows)]
+
+link:index.html[Documents (Chemin relatif à ce document)]
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+link:\\server\share\whitepaper.pdf[Livre Blanc (Chemin vers un serveur windows)]
+
+link:index.html[Documents (Chemin relatif à ce document)]
+....
+
+=== Liens Email / Chat IRC
+
+=====
+devel@discuss.arquillian.org
+
+mailto:devel@discuss.arquillian.org[Discuss Arquillian]
+
+mailto:devel-join@discuss.arquillian.org[Subscribe, Subscribe me, I want to join!]
+
+irc://irc.freenode.org/#asciidoctor
+=====
+
+.Voici comment l'écrire en Asciidoc:
+....
+devel@discuss.arquillian.org
+
+mailto:devel@discuss.arquillian.org[Discuss Arquillian]
+
+mailto:devel-join@discuss.arquillian.org[Subscribe, Subscribe me, I want to join!]
+
+irc://irc.freenode.org/#asciidoctor
+....
+
+
+=== Liens internes au document
+
+* Référencer un texte et créer un lien vers celui-ci
+
+====
+[[bookmark-a]]Une première façon de référencer un texte.
+
+anchor:bookmark-b[]Une autre façon de le faire.
+
+[[bookmark-c,last paragraph]]Et encore une autre.
+
+<<bookmark-a, Lien vers la première ligne>>
+
+<<bookmark-b, Lien vers la sconde ligne>>
+
+<<bookmark-c, Lien vers la dernière ligne>> ou  <<last paragraph, Lien vers la dernière ligne>>
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+[[bookmark-a]]Une première façon de référencer un texte.
+
+anchor:bookmark-b[]Une autre façon de le faire.
+
+[[bookmark-c,last paragraph]]Et encore une autre.
+
+<<bookmark-a, Lien vers la première ligne>>
+
+<<bookmark-b, Lien vers la sconde ligne>>
+
+<<bookmark-c, Lien vers la dernière ligne>> ou  <<last paragraph, Lien vers la dernière ligne>>
+....
+
+=== Liens entre documents
+
+====
+Se référer à la <<document-b.adoc#section-b,Section B>> pour plus d'information.
+
+Ou la <<document-b#section-42,Section 42>> pour toute autre information!
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+Se référer à la <<document-b.adoc#section-b,Section B du document X>> pour plus d'information.
+
+Ou la <<document-b#section-42,Section 42>> pour toute autre information!
+....
+
+== Les images
+
+====
+image::images/ninjapig.png[]
+
+Une image de image:images/ninjapig.png[] dans une phrase.
+
+[[img-sunset]]
+image::images/ninjapig.png[caption="Figure 1: ", title="Un cochon ninja", alt="NinjaPig", width="300", height="200", link="http://orig10.deviantart.net/778b/f/2013/076/7/4/ninja_pig_by_droganaida-d5ybgd0.png"]
+
+image::http://orig10.deviantart.net/778b/f/2013/076/7/4/ninja_pig_by_droganaida-d5ybgd0.png[GitHub mascot,width="100", height="100"]
+====
+
+.Voici comment l'écrire en Asciidoc:
+....
+image::images/ninjapig.png[]
+
+Une image de image:images/ninjapig.png[] dans une phrase.
+
+[[img-sunset]]
+image::images/ninjapig.png[caption="Figure 1: ", title="Un cochon ninja", alt="NinjaPig", width="300", height="200", link="http://orig10.deviantart.net/778b/f/2013/076/7/4/ninja_pig_by_droganaida-d5ybgd0.png"]
+
+image::http://orig10.deviantart.net/778b/f/2013/076/7/4/ninja_pig_by_droganaida-d5ybgd0.png[GitHub mascot,width="100", height="100"]
+....
+
+
+IMPORTANT: Le lien pour afficher une image est un chemin relatif, c'est-à-dire qu'il faut indiquer le lien par rapport à l'emplacement du fichier adoc. De même si vous transférez le fichier adoc sans les images, ou autres ressources liées au document, elles ne seront pas visibles.
+
+TIP: Si vous créez un répertoire pour y mettre vos images, il est conseillé d'ajouter l'attribut `:imagesdir: votre_dossier` dans les entêtes du document. Cela vous évitera de réécrire le chemin complet à chaque fois.

@@ -1,0 +1,5 @@
+digraph{
+rankdir="LR"
+atom->is->very->easy
+is->not->very
+}
