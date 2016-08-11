@@ -1,0 +1,45 @@
+= Présentation Asciidoc
+M. David <mdavid@sqli.com>
+v1.0, 2016-02-25
+:toc: preamble
+:toc-title: Table des matières
+:toclevels: 5
+:numbered:
+:sectlinks:
+:imagesdir: 000_FOR_ASCIIDOC/
+:revealjs_theme: sqlislide
+:revealjs_slideNumber: true
+:revealjs_parallaxBackgroundImage: reveal.js/css/theme/image/fondnoir.jpg
+:revealjs_parallaxBackgroundSize: cover
+
+[NOTE.speaker]
+====
+Ce document sert de support à la formation Asciidoc.
+====
+
+[data-background="reveal.js/css/theme/image/fondmarron.jpg"]
+== Les outils pour faire de l'Asciidoc
+
+:leveloffset: 1
+
+include::000_FOR_ASCIIDOC/010_FOR_OUTILS_ASCIIDOC.adoc[]
+
+:leveloffset: 0
+
+[data-background="reveal.js/css/theme/image/fondmarron.jpg"]
+== Avant de commencer
+
+:leveloffset: 1
+
+include::000_FOR_ASCIIDOC/020_FOR_WORKDIR.adoc[]
+
+:leveloffset: 0
+
+[data-background="reveal.js/css/theme/image/fondmarron.jpg"]
+== Comment écrire en Asciidoc
+
+:leveloffset: 1
+
+include::000_FOR_ASCIIDOC/030_FOR_ECRIRE_EN_ASCIIDOC.adoc[]
+
+:leveloffset: 0
