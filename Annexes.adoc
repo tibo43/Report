@@ -1,0 +1,18 @@
+== Virtualisation
+
+La virtualisation est une technique permettant de faire fonctionner plusieurs ordinateurs virtuels à l'aide d'un seul ordinateur ou serveur physique. Cette technologie a l'avatange de limiter l'achat de matériels physiques et de gérer efficacement et plus simplement les environnements virtuels qui sont et seront créés. Il existe plusieurs type de virtualisation.
+
+La plus répandue est la virtualisation complète. Elle utilise un hyperviseur servant de gestionnaire pour les machines virtuelles instanciées et d'isolateur entre elles et le système d'exploitation de la machine physique (certains hyperviseurs comme VMWare ESXi remplace le système d'exploitation). Le principe de cette technologie est de créer un environnement virtuel en simulant un ordinateur complet. L'hyperviseur alloue les ressources que l'on souhaite attribué au nouvel environnement en fonction des ressources physiques disponibles. Le lien entre les ressources physique et les machines virtuelles est fait grâce à l'hyperviseur.
+
+*Mettre image _Virtualisation_*
+
+L'avantage de cette technologie est qu'il est possible de créer un environnement virtuel Windows sur un serveur Linux. Cependant,
+
+La nouvelle technologie émergente est la _containerisation_. Elle est poussé par la culture DevOps et de nombreux logiciel tel que _LXC_, _OpenVZ_ et surtout _Docker_. Au lieu de simuler un ordinateur complet comme la précédente technique évoquée, le logiciel instancie un environnement en l'isolant avec son propre espace mémoire. Les ressources systèmes sont partagées entre le kernel de la machine hôte et les "containers".
+
+
+== OpenStack
+
+
+
+== Zabbix

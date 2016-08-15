@@ -1,1 +1,11 @@
+Je remercie l'entité ISC France de m'avoir offert la possibilité de travailler au sein de leur structure.
 
+Je tiens à remercier particulièrement l'équipe du _CRCI_ de l'entité leur accueil et leur soutient.
+*Arnaud Roudsovsky*, responsable du pôle _CRCI_, m'a accordé sa confiance pour cette mission. Il m'a conseillé et m'a permis d'acquérir de l'expérience professionnelle.
+Je remercie *Frédéric Gracia* et *Romain Ballan*, ingénieurs au sein du pôle de m'avoir fait confiance. Leurs expériences et leurs connaissance m'ont permis de progresser dans de nombreux domaines. A leur côtés, j'ai pu connaitre les diverses facettes du métier d'ingénieur réseaux et systèmes.
+
+Je remercie toute l'équipe _Expertise_ d'ISC France. Leur accueil, leur soutient et leur connaissance m'ont permis d'en apprendre plus sur la culture _DevOps_ et le _continuous delivery_ qu'ils souhaitent mettre en place.
+
+Les deux pôles possèdent une grande solidarité de part leur promiscuité spatiale (travaillent dans le même openspace) et culturel (ils sont les acteurs principaux du mouvement _DevOps_). Leurs humours et les discussions passées m'ont permis de me sentir en confiance et intégré à l'entreprise.
+
+Je remercie tous les collaborateurs d'ISC France pour leurs gentillesses et leurs disponibilités.

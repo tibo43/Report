@@ -54,9 +54,7 @@ Conclusion du sujet
 = Annexes
 
 * Virtualisation
-* Openstack
 * Containerisation
-* Docker
-* SNMP
+* Openstack
 * Zabbix
 * Ansible
