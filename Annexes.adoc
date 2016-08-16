@@ -6,13 +6,22 @@ La plus répandue est la virtualisation complète. Elle utilise un hyperviseur s
 
 *Mettre image _Virtualisation_*
 
-L'avantage de cette technologie est qu'il est possible de créer un environnement virtuel Windows sur un serveur Linux. Cependant,
+L'avantage de cette technologie est qu'il est possible de créer un environnement virtuel Windows sur un serveur Linux. Cependant, sa principal limitation est son coût en matière de ressources. Par exemple, un utilisateur alloue à un environnement virtuel deux gigaoctets de mémoire. Cette quantité est déduite de la quantité total disponible matériellement et ce, même si l'environnement n'en utilise que la moitié.
 
-La nouvelle technologie émergente est la _containerisation_. Elle est poussé par la culture DevOps et de nombreux logiciel tel que _LXC_, _OpenVZ_ et surtout _Docker_. Au lieu de simuler un ordinateur complet comme la précédente technique évoquée, le logiciel instancie un environnement en l'isolant avec son propre espace mémoire. Les ressources systèmes sont partagées entre le kernel de la machine hôte et les "containers".
+La nouvelle technologie émergente est la _containerisation_. Elle est poussé par la culture DevOps et de nombreux logiciel tel que _LXC_, _OpenVZ_ et surtout _Docker_. Au lieu de simuler un ordinateur complet comme la précédente technique évoquée, le logiciel instancie un environnement en l'isolant avec son propre espace mémoire. Les ressources systèmes et matériel sont partagées entre le kernel de la machine hôte et les "containers". Le principe de cette technologie est de pouvoir créer et détruire rapidement et simple une application avec toute sa configuration.
 
+*Mettre image _Containerisation_*
 
-== OpenStack
+L'avantage est de pouvoir avoir des applications que l'on peut migrer d'une machine à une autre et redéployer rapidement et simplement en cas de panne sur le container. Néanmoins, vu que la technologie utilise le partage des appels système entre l'hôte et les machines virtuelles, il n'est pas possible d'instancier un environnement Windows sur un système d'exploitation Linux. De plus, cette technologie n'est native uniquement dans un environnement Linux. Certains logiciels tels que _Docker_ la développe sous les environnements Windows et MacOS en ajoutant une couche d'abstraction entre le système d'exploitation et les containers.
 
+Ces technologies sont de plus en plus utilisées dans les infrastructures des entreprises, soit à travers la souscription d'une offre de _cloud computing_ ou par le déploiement d'une architecture interne à l'aide de solution tels que _OpenStack_ ou _VMWare_.
 
+<<<
 
 == Zabbix
+
+Zabbix est un ensemble de logiciel permettant la surveillance de l'infrastructure à travers la récupération de mesures de ressources sur chaque environnement souhaité. Il existe trois logiciels pour le fonctionnement de cet outil, serveur, agent et proxy. Dans une infrastructure possédant tous ces logiciels offre une surveillance distribuée de l'architecture réseau d'une entreprise.
+
+=== Serveur Zabbix
+
+Le serveur est le centre de l'architecture Zabbix. Il peut fonctionner sous

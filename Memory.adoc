@@ -18,6 +18,10 @@ include::Glossaire.adoc[]
 
 <<<
 
+= Introduction
+
+<<<
+
 == Contexte Industriel
 
 include::SQLi_Groupe.adoc[]
@@ -43,6 +47,10 @@ include::Zabbix.adoc[]
 == Solution de gestion des configurations
 
 include::Ansible.adoc[]
+
+<<<
+
+= Conclusion
 
 <<<
 
