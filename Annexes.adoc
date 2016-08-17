@@ -20,8 +20,48 @@ Ces technologies sont de plus en plus utilisées dans les infrastructures des en
 
 == Zabbix
 
-Zabbix est un ensemble de logiciel permettant la surveillance de l'infrastructure à travers la récupération de mesures de ressources sur chaque environnement souhaité. Il existe trois logiciels pour le fonctionnement de cet outil, serveur, agent et proxy. Dans une infrastructure possédant tous ces logiciels offre une surveillance distribuée de l'architecture réseau d'une entreprise.
+Zabbix est un ensemble de logiciel permettant la surveillance de l'infrastructure à travers la récupération de mesures de ressources sur chaque environnement souhaité. Il existe trois logiciels pour le fonctionnement de cet outil, serveur, agent et proxy. Dans une infrastructure possédant tous ces logiciels offre une surveillance distribuée de l'architecture réseau d'une entreprise. Le principe de ces outils est de récupérer un nombre illimité de ressources, de regrouper les données sur la base du données couplée du serveur et que celui-ci les analyse en créant des graphes et en alertant les administrateurs système en cas de soulèvement d'un déclencheur.
 
-=== Serveur Zabbix
+=== Architecture Zabbix
 
-Le serveur est le centre de l'architecture Zabbix. Il peut fonctionner sous
+Une architecture Zabbix peut être constitué d'au minimun, un serveur auquel on peut greffer deux autres outils, des agents et des proxys. Le serveur est le maitre de l'architecture et les proxys (si utilisés) sont les maîtres d'un certain nombre d'agent. En utilisant tous les outils, il est donc possible d'avoir une architecture distribuée. La transmission des données se fait par au moyens de protocoles de communication réseaux.
+
+[[img-sunset]]
+image::./Images/Architecture_Zabbix.png[caption="Figure 3: ", title="Architecture complète d'une supervision par les outils Zabbix"]
+
+Les outils _server_ et _frontend_ sont le noeud central d'une architecture Zabbix. Ils doivent être couplé à une base de données (_MySQL_, _Oracle_, _PostgreSQL_ ou _SQLite_) pour le stockage des données et à un serveur webune base de données (_MySQL_, _Oracle_, _PostgreSQL_ ou _SQLite_) pour le stockage des données et à un serveur web. Le serveur Zabbix est le centre de l'architecture Zabbix. Son objectif est de récupèrer et d'analyser les données, de calculer les déclencheurs d'alertes et d'envoyer des notifications (courriel, SMS,...) aux utilisateurs en cas de problèmes détectés. Le serveur Zabbix a la capacité d'utiliser le protocole _SNMP_ afin de récupérer les données souhaitées par un utilisateur.
+
+<<<
+
+L'outil _proxy_ sert d'intermédiaire entre le serveur et les agents. Il est installable dans un environnement Linux. Son objectif est de limiter la charge en processus système et en ressource du serveur. Il doit être couplé à une base données pour fonctionner. Il stocke les mesures des différents hôtes dont il est maître et transfert tout le contenu de la base au serveur.
+ +
+Le logiciel _agent_ de Zabbix est un outils installable sur les environnements Linux, MacOS ou Windows. Il a pour but de récupérer au travers du système d'exploitation les mesures souhaitées et de les transmettre à son noeud supérieur.
+
+=== Communication entre un serveur et un agent
+
+Dans Zabbix, la communication entre un noeud et son maitre se fait par le protocole _HTTP_ et les données transmises sont au format _JSON_. Il existe deux modes d'échange entre les noeuds.
+ +
+Le premier est le "check" dit passif. Le zabbix serveur envoie une requête de demande de donné et l'agent lui répond en transmettant les mesures souhaitées.
+
+[[img-sunset]]
+image::./Images/Checks_Passif.png[caption="Figure 4: ", title="Exemple de check passif"]
+
+<<<
+
+Le second est le "check" actif. Dans ce cas, c'est l'agent qui amorce les échanges. La communication est décomposé en deux étapes distinctes.
+ +
+Pour commencer, l'agent initialise la connexion avec son maitre en lui demandant la liste de toutes les données qu'il souhaite récupérer. Une fois qu'il la récupère, l'agent démarre sa collecte de données à un intervalle fixé par l'utilisateur pour chacunes des mesures. Une fois que la liste est complétée, il transmet au serveur les résultats.
+
+[[img-sunset]]
+image::./Images/Checks_Actif.png[caption="Figure 5: ", title="Exemple de check actif"]
+
+L'intêrét de ce dernier check est de limiter la bande passante des noeuds maîtres étant donné que l'agent transmet une liste de mesures.
+
+<<<
+
+=== Système d'alertes
+
+Zabbix propose de générer une alerte lorsque certaines conditions sont remplies. Le principe de la surveillance est de notifier les administrateurs en cas de problème infrastructuraux qu'ils définissent à partir de l'interface graphique de Zabbix. Ces alertes utilisent trois types de fonctionnalité zabbix. Les _items_ sont des éléments qui définissent les mesures à effectuer. Ensuite, les triggers générent un type événement dépendant d'une valeur collectée à partir d'un item. Enfin, les actions est le fait d'envoyer une alerte à des utilisateurs selon le type d'évènement généré par un trigger.
+
+[[img-sunset]]
+image::./Images/Processus_Alerte.png[caption="Figure 6: ", title="Processus de génération d'une alerte"]
