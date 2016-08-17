@@ -45,6 +45,9 @@ est un protocole réseau permettant aux administrateurs réseaux de gérer et mo
 SSH (Secure Shell)::
 est un protocole de communication sécurisée basé sur l'utilisation du couple clef privée/clef publique pour chiffrer et déchiffrer les communications entre deux communicants. L'échange de clef publique avant l'intéraction est obligatoire.
 
+Supervision::
+est une technique industrielle visant à surveiller le bon fonctionnement d'un système et à alerter en cas de panne sur celui-ci. Elle permet d'analyser les mesures afin d'optimiser le système superviser.
+
 Virtualisation::
 est le fait de faire fonctionner plusieurs ordinateurs virtuels sur un seul ordinateur physique.
 

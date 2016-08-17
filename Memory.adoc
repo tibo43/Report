@@ -20,6 +20,8 @@ include::Glossaire.adoc[]
 
 = Introduction
 
+include::Introduction.adoc[]
+
 <<<
 
 == Contexte Industriel
@@ -51,6 +53,8 @@ include::Ansible.adoc[]
 <<<
 
 = Conclusion
+
+include::Conclusion.adoc[]
 
 <<<
 
