@@ -2,15 +2,17 @@
 
 La virtualisation est une technique permettant de faire fonctionner plusieurs ordinateurs virtuels à l'aide d'un seul ordinateur ou serveur physique. Cette technologie a l'avatange de limiter l'achat de matériels physiques et de gérer efficacement et plus simplement les environnements virtuels qui sont et seront créés. Il existe plusieurs type de virtualisation.
 
-La plus répandue est la virtualisation complète. Elle utilise un hyperviseur servant de gestionnaire pour les machines virtuelles instanciées et d'isolateur entre elles et le système d'exploitation de la machine physique (certains hyperviseurs comme VMWare ESXi remplace le système d'exploitation). Le principe de cette technologie est de créer un environnement virtuel en simulant un ordinateur complet. L'hyperviseur alloue les ressources que l'on souhaite attribué au nouvel environnement en fonction des ressources physiques disponibles. Le lien entre les ressources physique et les machines virtuelles est fait grâce à l'hyperviseur.
+La plus répandue est la virtualisation complète. Elle utilise un hyperviseur servant de gestionnaire pour les machines virtuelles instanciées et d'isolateur entre elles et le système d'exploitation de la machine physique. Il est possible que certains hyperviseurs comme VMWare ESXi soient installés à la place d'un système d'exploitation, c'est la virtualisation de type I. Le principe de cette technologie est de créer un environnement virtuel en simulant un ordinateur complet. L'hyperviseur alloue les ressources que l'on souhaite attribué au nouvel environnement en fonction des ressources physiques disponibles. Le lien entre les ressources physique et les machines virtuelles est fait grâce à l'hyperviseur.
 
-*Mettre image _Virtualisation_*
+[[img-sunset]]
+image::./Images/Schema_Virtualisation.png[caption="Figure 3: ", title="Représentation de la virtualisation de type I"]
 
 L'avantage de cette technologie est qu'il est possible de créer un environnement virtuel Windows sur un serveur Linux. Cependant, sa principal limitation est son coût en matière de ressources. Par exemple, un utilisateur alloue à un environnement virtuel deux gigaoctets de mémoire. Cette quantité est déduite de la quantité total disponible matériellement et ce, même si l'environnement n'en utilise que la moitié.
 
 La nouvelle technologie émergente est la _containerisation_. Elle est poussé par la culture DevOps et de nombreux logiciel tel que _LXC_, _OpenVZ_ et surtout _Docker_. Au lieu de simuler un ordinateur complet comme la précédente technique évoquée, le logiciel instancie un environnement en l'isolant avec son propre espace mémoire. Les ressources systèmes et matériel sont partagées entre le kernel de la machine hôte et les "containers". Le principe de cette technologie est de pouvoir créer et détruire rapidement et simple une application avec toute sa configuration.
 
-*Mettre image _Containerisation_*
+[[img-sunset]]
+image::./Images/Schema_Containerisation.png[caption="Figure 4: ", title="Représentation de la containerisation"]
 
 L'avantage est de pouvoir avoir des applications que l'on peut migrer d'une machine à une autre et redéployer rapidement et simplement en cas de panne sur le container. Néanmoins, vu que la technologie utilise le partage des appels système entre l'hôte et les machines virtuelles, il n'est pas possible d'instancier un environnement Windows sur un système d'exploitation Linux. De plus, cette technologie n'est native uniquement dans un environnement Linux. Certains logiciels tels que _Docker_ la développe sous les environnements Windows et MacOS en ajoutant une couche d'abstraction entre le système d'exploitation et les containers.
 
@@ -27,7 +29,7 @@ Zabbix est un ensemble de logiciel permettant la surveillance de l'infrastructur
 Une architecture Zabbix peut être constitué d'au minimun, un serveur auquel on peut greffer deux autres outils, des agents et des proxys. Le serveur est le maitre de l'architecture et les proxys (si utilisés) sont les maîtres d'un certain nombre d'agent. En utilisant tous les outils, il est donc possible d'avoir une architecture distribuée. La transmission des données se fait par au moyens de protocoles de communication réseaux.
 
 [[img-sunset]]
-image::./Images/Architecture_Zabbix.png[caption="Figure 3: ", title="Architecture complète d'une supervision par les outils Zabbix"]
+image::./Images/Architecture_Zabbix.png[caption="Figure 5: ", title="Architecture complète d'une supervision par les outils Zabbix"]
 
 Les outils _server_ et _frontend_ sont le noeud central d'une architecture Zabbix. Ils doivent être couplé à une base de données (_MySQL_, _Oracle_, _PostgreSQL_ ou _SQLite_) pour le stockage des données et à un serveur webune base de données (_MySQL_, _Oracle_, _PostgreSQL_ ou _SQLite_) pour le stockage des données et à un serveur web. Le serveur Zabbix est le centre de l'architecture Zabbix. Son objectif est de récupèrer et d'analyser les données, de calculer les déclencheurs d'alertes et d'envoyer des notifications (courriel, SMS,...) aux utilisateurs en cas de problèmes détectés. Le serveur Zabbix a la capacité d'utiliser le protocole _SNMP_ afin de récupérer les données souhaitées par un utilisateur.
 
@@ -44,7 +46,7 @@ Dans Zabbix, la communication entre un noeud et son maitre se fait par le protoc
 Le premier est le "check" dit passif. Le zabbix serveur envoie une requête de demande de donné et l'agent lui répond en transmettant les mesures souhaitées.
 
 [[img-sunset]]
-image::./Images/Checks_Passif.png[caption="Figure 4: ", title="Exemple de check passif"]
+image::./Images/Checks_Passif.png[caption="Figure 6: ", title="Exemple de check passif"]
 
 <<<
 
@@ -53,7 +55,7 @@ Le second est le "check" actif. Dans ce cas, c'est l'agent qui amorce les échan
 Pour commencer, l'agent initialise la connexion avec son maitre en lui demandant la liste de toutes les données qu'il souhaite récupérer. Une fois qu'il la récupère, l'agent démarre sa collecte de données à un intervalle fixé par l'utilisateur pour chacunes des mesures. Une fois que la liste est complétée, il transmet au serveur les résultats.
 
 [[img-sunset]]
-image::./Images/Checks_Actif.png[caption="Figure 5: ", title="Exemple de check actif"]
+image::./Images/Checks_Actif.png[caption="Figure 7: ", title="Exemple de check actif"]
 
 L'intêrét de ce dernier check est de limiter la bande passante des noeuds maîtres étant donné que l'agent transmet une liste de mesures.
 
@@ -64,4 +66,4 @@ L'intêrét de ce dernier check est de limiter la bande passante des noeuds maî
 Zabbix propose de générer une alerte lorsque certaines conditions sont remplies. Le principe de la surveillance est de notifier les administrateurs en cas de problème infrastructuraux qu'ils définissent à partir de l'interface graphique de Zabbix. Ces alertes utilisent trois types de fonctionnalité zabbix. Les _items_ sont des éléments qui définissent les mesures à effectuer. Ensuite, les triggers générent un type événement dépendant d'une valeur collectée à partir d'un item. Enfin, les actions est le fait d'envoyer une alerte à des utilisateurs selon le type d'évènement généré par un trigger.
 
 [[img-sunset]]
-image::./Images/Processus_Alerte.png[caption="Figure 6: ", title="Processus de génération d'une alerte"]
+image::./Images/Processus_Alerte.png[caption="Figure 8: ", title="Processus de génération d'une alerte"]

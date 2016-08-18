@@ -8,4 +8,6 @@ Depuis quelques mois, la direction de l'entité poussée par quelques collaborat
  +
  En plus de l'objectif et de l'apprentissage des nouvelles techniques issues de la culture DevOps, le stage devait me servir d'initiation au métier d'ingénieur réseaux et système. J'ai donc dû aider l'équipe dans leurs tâches quotidiennes comme la gestion du parc informatique et l'assistance des collaborateurs ayant des difficultés de réseaux ou de système.
 
+<<<
+
 Le plan adopté pour la suite de ce mémoire est composé de trois parties. La première consiste a décrire le contexte industriel global afin de comprendre les enjeux actuels et futurs de l'entité. La deuxième section explique les raisons de la demande d'évolution de la plateforme de supervision et expose les méthodes répondant à cette problématique. La dernière partie énonce une solution déployer pour résoudre le changement de configuration sur un nombre important d'environnement.

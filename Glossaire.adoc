@@ -39,6 +39,9 @@ est un logiciel _Microsoft_ intégrant une interface en ligne de commande, compo
 Openstack::
 est un ensemble de logiciel open source permettant de déployer des architectures informatiques à l'aide de la virtualisation.
 
+Redundant Array of Independent Disks (RAID)::
+est un ensemble de technique de stockage offrant la répartition et la sauvegarde des données sur plusieurs disques durs afin d'améliorer les performances, la sécurité et la tolérance aux pannes.
+
 SNMP (Simple Network Management Protocol)::
 est un protocole réseau permettant aux administrateurs réseaux de gérer et monitorer tout type de matériel réseau.
 
