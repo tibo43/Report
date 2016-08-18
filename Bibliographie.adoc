@@ -1,37 +1,21 @@
-[1] Len Bass, Ingo Weber, Liming Zhu: _DevOps: A Software Architect's Perspective_
-https://books.google.com.br/books?hl=fr&lr=&id=fcwkCQAAQBAJ&oi=fnd&pg=PT13&dq=devops&ots=KQAoo9OSXc&sig=OlWvAETe04w20bk6j4fWQ8S4Nrs#v=onepage&q=devops&f=false
+[1] L. Bass, I. Weber, L. Zhu, _DevOps: A Software Architect's Perspective_, Addison-Wesley Professional, 2015.
 
-[2] Joonas Hamunen: _Challenges in Adopting a Devops Approach to Software Development and Operations_
-https://aaltodoc.aalto.fi/bitstream/handle/123456789/20766/hse_ethesis_14441.pdf?sequence=1&isAllowed=y
+[2] J. Hamunen, _Challenges in Adopting a Devops Approach to Software Development and Operations_, Thèse de master, Université de Aalto, 69p, 2016.
 
-[3] Jez Humble, David Farley: _Continuous Delivery_
-http://www.johnchukwuma.com/training/ContinuousDelivery.pdf
+[3] J. Humble, D. Farley, _Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation_, Addison-Wesley Professional, 2010.
 
-[4] Thomas Anderson, Larry Peterson, Scott Shenker, Jonathan Turner: _Overcoming the Internet Impasse Through Virtualization_
-http://pages.cs.wisc.edu/~akella/CS838/F09/838-Papers/APST05.pdf
+[4] T. Anderson, L. Peterson, S. Shenker, J.  Turner, _Overcoming the Internet Impasse Through Virtualization_, Computer, 38:34-41, 2005.
 
-[5] Suganya Sridharan : _A Performance Comparison of Hypervisors for Cloud Computing_
-http://digitalcommons.unf.edu/cgi/viewcontent.cgi?article=1275&context=etd
+[5] S. Sridharan, _A Performance Comparison of Hypervisors for Cloud Computing_, Thèse de master, Université de North Florida, 127p, 2012.
 
-[6] Omar Sefraoui, Mohammed Aissaoui, Mohsine Eleuldj: _OpenStack: Toward an Open-Source Solution for Cloud Computing_
-http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.245.229&rep=rep1&type=pdf
+[6] O. Sefraoui, M. Aissaoui, M. Eleuldj, _OpenStack: Toward an Open-Source Solution for Cloud Computing_, International Journal of Computer Applications, 55:38-42, 2012.
 
-[7] Sampathkumar: _Virtualizing Intelligent River : A comparative study of alternative vir-
-tualization technologies_
-http://tigerprints.clemson.edu/cgi/viewcontent.cgi?article=2804&context=all_theses
+[7] A. Sampathkumar, _Virtualizing Intelligent River : A comparative study of alternative virtualization technologies_, Thèse de master, Université de Clemson, 85p, 2013.
 
-[8] Kirill Kolyshkin: _Virtualization in Linux_
-http://mirror.ihc.ru/download.openvz.org/doc/openvz-intro.pdf
+[8] K. Kolyshkin, _Virtualization in Linux_, White paper OpenVZ, 3:39p, 2006.
 
-[9] Dirk Merkel: _Docker: Lightweight Linux Containers for Consistent Development and Deployment_
-http://www.linuxjournal.com/content/docker-lightweight-linux-containers-consistent-development-and-deployment
+[9] D. Merkel, _Docker: Lightweight Linux Containers for Consistent Development and Deployment_, site de Linux Journal [En Ligne], Adresse URL: http://www.linuxjournal.com/content/docker-lightweight-linux-containers-consistent-development-and-deployment
 
-[10] TROUVER ARTICLE SUR LES BIEN FAIT DU MONITORING
+[10] P. Patel, A. H. Ranabahu, A. P. Sheth, _Service Level Agreement in Cloud Computing_, 2009.
 
-[11] Pankesh Patel, Ajith H. Ranabahu, Amit P. Sheth: _Service Level Agreement in Cloud Computing_
-http://corescholar.libraries.wright.edu/cgi/viewcontent.cgi?article=1077&amp;context=knoesis
-
-[12] Mathijs Jeroen Scheepers: _Virtualization and Containerization of Application Infrastructure: A Comparison_
-http://referaat.cs.utwente.nl/conference/21/paper/7449/virtualization-andcontainerization-of-application-infrastructure-a-comparison.pdf
-
-[13] SNMP
+[11] M. J. Scheepers, _Virtualization and Containerization of Application Infrastructure: A Comparison_, 2014.
