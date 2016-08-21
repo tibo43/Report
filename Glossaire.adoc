@@ -1,64 +1,64 @@
 Ansible::
-est un logiciel open source permettant la configuration et la gestion des ordinateurs à distance.
+logiciel open source permettant la configuration et la gestion à distance des machines.
 
 Cloud Computing::
-est un paradigme récent avec pour but de centraliser et d'utiliser au maximum la puissance de calcul de chaque serveur. L'intêrét est de limiter les dépenses en matériel et en ressource électrique. De nombreuses entreprise fournissent à leurs clients différents services issue de ce paradigme. Les trois catégories de services sont _Infrastructure As A Service_ (IaaS) -les clients souscrivent un accès à un parc informatique virtualisé-, _Platforme As A Service_ (PaaS) -les clients souscrivent à des matériels virtuels leur offrant un controle pour installer des applications- et _Software As a Service_ (SaaS) -les clients souscrivent à des applications.
+paradigme récent ayant pour but de centraliser et d'utiliser au maximum la puissance de calcul de chaque serveur. Le principe est de limiter les dépenses en matériel et en ressource électrique. De nombreuses entreprises fournissent à leurs clients différents services issus de ce paradigme. Le Cloud Computing se décline en trois catégories de service, _Infrastructure As A Service_ (IaaS), _Platforme As A Service_ (PaaS) et _Software As a Service_ (SaaS).
 
 [[img-sunset]]
 image::./Images/Services_CloudComputing.png[caption="Figure 1: ", title="Catégorie des services du Cloud Computing", width="309", height="205"]
 
 Containerisation::
-est une sous-catégorie de la virtualisation. C'est le fait d'instancier uniquement le système d'exploitation de chaque environnement virtuel souhaité.
+sous-catégorie de la virtualisation. Il s'agit d'instancier uniquement le système d'exploitation de chaque environnement virtuel souhaité.
 
 Continuous Delivery::
-est une approche de l'ingénierie logiciel visant à assurer le fonctionnement d'une application entre chaque version de celle-ci. Des cycles courts sont étudiés pour corriger le plus rapidement les bogues possibles.
+approche de l'ingénierie logiciel visant à assurer le fonctionnement d'une application entre chacune de ses versions. Des cycles courts sont étudiés pour corriger le plus rapidement les éventuels bogues.
 
 <<<
 
 DevOps::
-est un mouvement informatique visant à donner une cohésion entre chaque les équipes de développeur et les équipes d'administrateur au sein d'une même entreprise.
+mouvement informatique visant à donner une cohésion entre les équipes de développeurs et les équipes d'administrateurs au sein d'une même entreprise.
 
 [[img-sunset]]
 image::./Images/DevOps_Cycle.png[caption="Figure 2: ", title="DevOps représenté en cycle", width="300", height="149"]
 
 Docker::
-est un logiciel open source permettant de créer, gérer et détruire des environnements virtuels de type container.
+logiciel open source permettant de créer, gérer et détruire des environnements virtuels de type container.
 
 Entreprise services du numérique (ESN)::
-Anciennement société de services en ingénierie informatique (SSII), est une société de service proposant ces services à ces clients pour des missions d'ordre informatique.
+société de service proposant des solution à ces clients pour des missions d'ordre informatique, anciennement nommé société de services en ingénierie informatique (SSII).
 
 JavaScript Object Notation (JSON)::
-est un format de données textuelle issue du langage JavaScript
+format de données textuelles issu du langage JavaScript
 
 Paradigme::
-est une vision qui classe des notions informatiques par leur solution.
+vision classant des notions informatiques par leur solution.
 
 PowerShell::
-est un logiciel _Microsoft_ intégrant une interface en ligne de commande, composant permettant d'interpréter les commandes d'un utilisateur, et langage de script orienté objet PowerShell.
+logiciel _Microsoft_ intégrant une interface en ligne de commande permettant d'interpréter les commandes utilisateur, et langage de script orienté objet PowerShell.
 
 Openstack::
-est un ensemble de logiciel open source permettant de déployer des architectures informatiques à l'aide de la virtualisation.
+ensemble de logiciels open source visant de déployer des architectures informatiques à l'aide de la virtualisation.
 
 Redundant Array of Independent Disks (RAID)::
-est un ensemble de technique de stockage offrant la répartition et la sauvegarde des données sur plusieurs disques durs afin d'améliorer les performances, la sécurité et la tolérance aux pannes.
+ensemble de techniques de stockage offrant la répartition et la sauvegarde des données sur plusieurs disques durs afin d'améliorer les performances, la sécurité et la tolérance aux pannes.
 
 SNMP (Simple Network Management Protocol)::
-est un protocole réseau permettant aux administrateurs réseaux de gérer et monitorer tout type de matériel réseau.
+protocole réseau permettant aux administrateurs de gérer et monitorer tous les types de matériels réseaux.
 
 SSH (Secure Shell)::
-est un protocole de communication sécurisée basé sur l'utilisation du couple clef privée/clef publique pour chiffrer et déchiffrer les communications entre deux communicants. L'échange de clef publique avant l'intéraction est obligatoire.
+protocole de communication sécurisée basé sur l'utilisation du couple clef privée/clef publique pour chiffrer et déchiffrer les communications entre deux communicants. L'échange de clefs publiques avant l'intéraction est obligatoire.
 
 Supervision::
-est une technique industrielle visant à surveiller le bon fonctionnement d'un système et à alerter en cas de panne sur celui-ci. Elle permet d'analyser les mesures afin d'optimiser le système superviser.
+technique industrielle visant à surveiller le bon fonctionnement d'un système et à alerter les éventuelles panne.
 
 Virtualisation::
-est le fait de faire fonctionner plusieurs ordinateurs virtuels sur un seul ordinateur physique.
+technique visant à faire fonctionner plusieurs ordinateurs virtuels sur un seul ordinateur physique.
 
 WinRM::
-est un protocole de gestion à distance, propriété de _Microsoft_. Il a pour but de permettre un échange entre deux matériels implémentant ce protocole.
+protocole de gestion à distance, propriété de _Microsoft_.
 
 YAML (YAML Ain't Markup Langare)::
-est un format représentant des données par sérialisation comme le format_XML_.
+format représentant des données par sérialisation, à l'image du format _XML_.
 
 Zabbix::
-est un logiciel open source permettant la surveillance et la mesure de l'ensemble des matériels réseaux compatibles se trouvant dans une infrastructure.
+logiciel open source permettant la surveillance et la mesure de l'ensemble des matériels réseaux compatibles d'une infrastructure.

@@ -10,4 +10,4 @@ Depuis quelques mois, la direction de l'entité poussée par quelques collaborat
 
 <<<
 
-Le plan adopté pour la suite de ce mémoire est composé de trois parties. La première consiste a décrire le contexte industriel global afin de comprendre les enjeux actuels et futurs de l'entité. La deuxième section explique les raisons de la demande d'évolution de la plateforme de supervision et expose les méthodes répondant à cette problématique. La dernière partie énonce une solution déployer pour résoudre le changement de configuration sur un nombre important d'environnement.
+Ma reflexion s'orientera autour de trois grands axes. Il s'agira dans un premier temps de décrire le contexte industriel global afin d'en comprendre les enjeux actuels et futurs de l'entité ; puis, d'expliquer les raisons de l'évolution de la plateforme de supervision en exposant le panel des différentes méthodes que soulève cette problématique. Il s'agira enfin d'analyser la solution favorable à la résolution du changement de configuration sur un grand nombre d'environnement.
