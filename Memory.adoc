@@ -1,5 +1,4 @@
 = Evolution de la Plateforme de Supervision et Optimisation du Réseau: Mémoire de Stage de Fin d'Etudes
-:author: Thibaut Fabre
 :email: fabre.thibaut@gmail.com
 :revremark: Responsable : Arnaud Roudsovsky
 :revdate: 2016-08-18
@@ -31,8 +30,6 @@ include::Introduction.adoc[]
 include::SQLi_Groupe.adoc[]
 
 include::ISC_France.adoc[]
-
-<<<
 
 include::Pole_CRCI.adoc[]
 

@@ -9,13 +9,14 @@ Depuis 2015, l'entreprise a décidé de faire évoluer son infrastructure et ses
 * _Culture_ : changer l'organisation en silos par une organisation plate et collaborative.
 * _Automation_ -automatisation- : rendre autonome le déploiement des environnements de travail et de production.
 * _Lean_ : fluidifier et optimiser l'organisation et les modes d'intéractions entre les différents acteurs.
+
+<<<
+
 * _Measurement_ -mesure- : mettre en place des indicateurs de performance adéquats et partagés par tous les métiers.
 * _Sharing_ -solidarité- : accroitre la communication et la collaboration entre les métiers.
 
 Ce nom est la contraction de _Development_ (référence au métier de développeur) et _Operation_ (référence aux différentes discpline du métier d'infogérant).
 Il symbolise le thème émergeant de cette culture, à savoir l'étroite collaboration de ces métiers dans la réalisation des projets.
-
-<<<
 
 Au sein d'ISC France, cette culture est poussée par le pôle CRCI et le pôle Expertise.
 Ce dernier est le garant de la qualité technique des projets de part un support technique, la dispense de formations et la mise en place de bonne pratique à exécuter par les développeurs.

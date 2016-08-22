@@ -11,6 +11,8 @@ Le second est _Docker_ [9], devenu en quelques années un des outils de référe
  +
 A court terme, l'entrprise a pour but de migrer les machines virtuelles des VMWare ESXi vers OpenStack et les environnements virtuels d'OpenVZ vers Docker.
 
+<<<
+
 Au sein du pôle CRCI, de nouvelles pratiques ont émergé en lien avec la culture DevOps.
  +
 L'automatisation du déploiement des environnements de production est la première. Le but est de pouvoir détruire une machine virtuel avec la possibilité de la redéployer à l'identiqu en un minimum de temps. OpenStack est connu pour permettre nativement cette automatisation. A la création de l'instance virtuelle, un script (Bash, Python ou Perl), passé en paramètre, s'exécute et rend la machine utilisable dès son premier lancement.

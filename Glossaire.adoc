@@ -5,7 +5,7 @@ Cloud Computing::
 paradigme récent ayant pour but de centraliser et d'utiliser au maximum la puissance de calcul de chaque serveur. Le principe est de limiter les dépenses en matériel et en ressource électrique. De nombreuses entreprises fournissent à leurs clients différents services issus de ce paradigme. Le Cloud Computing se décline en trois catégories de service, _Infrastructure As A Service_ (IaaS), _Platforme As A Service_ (PaaS) et _Software As a Service_ (SaaS).
 
 [[img-sunset]]
-image::./Images/Services_CloudComputing.png[caption="Figure 1: ", title="Catégorie des services du Cloud Computing", width="309", height="205"]
+image::./Images/Services_CloudComputing.png[caption="Figure 1: ", title="Catégorie des services du Cloud Computing et les solutions connues", width="309", height="205"]
 
 Containerisation::
 sous-catégorie de la virtualisation. Il s'agit d'instancier uniquement le système d'exploitation de chaque environnement virtuel souhaité.

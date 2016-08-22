@@ -8,6 +8,4 @@ Depuis quelques mois, la direction de l'entité poussée par quelques collaborat
  +
  En plus de l'objectif et de l'apprentissage des nouvelles techniques issues de la culture DevOps, le stage devait me servir d'initiation au métier d'ingénieur réseaux et système. J'ai donc dû aider l'équipe dans leurs tâches quotidiennes comme la gestion du parc informatique et l'assistance des collaborateurs ayant des difficultés de réseaux ou de système.
 
-<<<
-
 Ma reflexion s'orientera autour de trois grands axes. Il s'agira dans un premier temps de décrire le contexte industriel global afin d'en comprendre les enjeux actuels et futurs de l'entité ; puis, d'expliquer les raisons de l'évolution de la plateforme de supervision en exposant le panel des différentes méthodes que soulève cette problématique. Il s'agira enfin d'analyser la solution favorable à la résolution du changement de configuration sur un grand nombre d'environnement.
