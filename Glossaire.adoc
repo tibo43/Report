@@ -25,7 +25,10 @@ Docker::
 logiciel open source permettant de créer, gérer et détruire des environnements virtuels de type container.
 
 Entreprise services du numérique (ESN)::
-société de service proposant des solution à ces clients pour des missions d'ordre informatique, anciennement nommé société de services en ingénierie informatique (SSII).
+société de services proposant dess solution à ces clients pour des missions d'ordre informatique, anciennement nommé société de services en ingénierie informatique (SSII).
+
+InnoDB::
+moteur de stockage pour _MySQL_ et _MariaDB_.
 
 JavaScript Object Notation (JSON)::
 format de données textuelles issu du langage JavaScript
@@ -34,13 +37,18 @@ Paradigme::
 vision classant des notions informatiques par leur solution.
 
 PowerShell::
-logiciel _Microsoft_ intégrant une interface en ligne de commande permettant d'interpréter les commandes utilisateur, et langage de script orienté objet PowerShell.
+logiciel _Microsoft_ intégrant une interface en ligne de commande, permettant d'interpréter les commandes utilisateurs, et le langage de script orienté objet PowerShell.
 
 Openstack::
-ensemble de logiciels open source visant de déployer des architectures informatiques à l'aide de la virtualisation.
+ensemble de logiciels open source visant à déployer des architectures informatiques à l'aide de la virtualisation.
+
+<<<
 
 Redundant Array of Independent Disks (RAID)::
 ensemble de techniques de stockage offrant la répartition et la sauvegarde des données sur plusieurs disques durs afin d'améliorer les performances, la sécurité et la tolérance aux pannes.
+
+Socket::
+une interface logicielle qu'utilise un développeur pour exploiter facilement les services d'un protocole réseau.
 
 SNMP (Simple Network Management Protocol)::
 protocole réseau permettant aux administrateurs de gérer et monitorer tous les types de matériels réseaux.
@@ -49,7 +57,7 @@ SSH (Secure Shell)::
 protocole de communication sécurisée basé sur l'utilisation du couple clef privée/clef publique pour chiffrer et déchiffrer les communications entre deux communicants. L'échange de clefs publiques avant l'intéraction est obligatoire.
 
 Supervision::
-technique industrielle visant à surveiller le bon fonctionnement d'un système et à alerter les éventuelles panne.
+technique industrielle visant à surveiller le bon fonctionnement d'un système et à alerter les éventuelles pannes.
 
 Virtualisation::
 technique visant à faire fonctionner plusieurs ordinateurs virtuels sur un seul ordinateur physique.

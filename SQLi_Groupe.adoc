@@ -4,7 +4,7 @@ _SQLi Group_ est une entreprise de services du numérique (ESN) française found
 
 SQLI Group articule son objectif autour de trois offres managées par trois entités différentes :
 
-- La "Transformation Digital", conduit par _SQLi Consulting_, offre ses conseils pour faciliter et accélérer la transformation digital de ses clients.
+- La "Transformation Digital", conduit par _SQLi Consulting_, offre ses conseils pour faciliter et accélérer la transformation digitale de ses clients.
 
 - La "Performance Business" propose de nouveaux outils pour la communication, le marketing et la vente à ses clients. Cette évolution est guidée par _WAX Interactive_.
 

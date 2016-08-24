@@ -1,6 +1,6 @@
 === ISC France
 
-SQLi Group est représenté à Bordeaux par deux entités de SQLI Enterprise, une agence et une sous-entité appelé _ISC_ (Innovative Service Centers). Cette dernière est le centre de service de SQLi Group. Il y en a quatre dans la société (deux en France et deux au maroc). ISC différe d'une agence dans le fait que les collaborateurs travaillent dans les locaux pour ses clients.
+SQLi Group est représenté à Bordeaux par deux entités de SQLI Enterprise, une agence et une sous-entité appelée _ISC_ (Innovative Service Centers). Cette dernière est le centre de service de SQLi Group. Il y en a quatre dans la société (deux en France et deux au Maroc). ISC différe d'une agence dans le fait que les collaborateurs travaillent dans les locaux pour ses clients.
 Cette dernière donnée oblige ces entités de posséder une infrastructure réseau et système conséquente pour reproduire au maximum les environnements de leur clients.
 
 <<<
