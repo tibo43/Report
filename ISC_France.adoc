@@ -1,9 +1,9 @@
 === ISC France
 
-SQLi Group est représenté à Bordeaux par deux entités de SQLI Enterprise, une agence et une sous-entité appelée _ISC_ (Innovative Service Centers). Cette dernière est le centre de service de SQLi Group. Il y en a quatre dans la société (deux en France et deux au Maroc). ISC différe d'une agence dans le fait que les collaborateurs travaillent dans les locaux pour ses clients.
-Cette dernière donnée oblige ces entités de posséder une infrastructure réseau et système conséquente pour reproduire au maximum les environnements de leur clients.
+SQLi Group est représenté à Bordeaux par deux entités de SQLI Enterprise, une agence et une sous-entité appelée _ISC_ (Innovative Service Centers). Cette dernière est le centre de service de SQLi Group. Il y en a quatre au sein du groupe (deux en France et deux au Maroc). ISC différe d'une agence dans le fait que les collaborateurs travaillent dans les locaux de l'entité.
+Cette donnée oblige ces structures de posséder une infrastructure réseau et système conséquente pour reproduire au maximum les environnements de leur clients.
 
 <<<
 
-ISC France est l'entité regroupant les centres de services de Bordeaux et de Nantes. Ils partagent la même direction et travaillent ensemble sur certains projets. De plus, l'infrastructure réseau et système de Bordeaux est le centre d'ISC France ce qui implique qu'un nombre important de serveurs est partagé avec l'entité de Nantes.
-Ces équipes mènent une veille technologique et culturelle de l'entreprise pouvant faire évoluer leurs méthodes de travail avec de nouvelles bonnes pratiques et l'infrastructure avec une évolution des techniques et des technologies. Sa flexibilité en fait la locomotive de SQLi Group qui se permet de diffuser ces nouvelles avancées à tous les collaborateurs.
+ISC France est un l'ensemble des deux centres de services français, Bordeaux et Nantes. Ils partagent la même direction, travaillent ensemble sur certains projets et possède une infrastructure centrale. En effet, Bordeaux héberge et gère un nombre important de serveurs partagé entre les deux entités.
+Ces équipes mènent une veille technologique constante leur permettant de mener des évolutions sur les méthodes de travail et les solutions utilisées par les collaborateurs. Son dynamisme en fait la locomotive de SQLi Group qui se permet de diffuser ces nouvelles avancées à tous les collaborateurs.

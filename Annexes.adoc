@@ -1,8 +1,8 @@
 == Virtualisation
 
-La virtualisation est une technique permettant de faire fonctionner plusieurs ordinateurs virtuels à l'aide d'un seul ordinateur ou serveur physique. Cette technologie a l'avatange de limiter l'achat de matériels physiques et de gérer efficacement et plus simplement les environnements virtuels qui sont et seront créés. Il existe plusieurs types de virtualisation.
+La virtualisation est une technique permettant de faire fonctionner plusieurs ordinateurs virtuels à l'aide d'un seul ordinateur ou serveur physique. Cette technologie a l'avatange de limiter l'achat de matériels physiques et de gérer efficacement et simplement les environnements virtuels créés. Il existe plusieurs types de virtualisation.
 
-La plus répandue est la virtualisation complète. Elle utilise un hyperviseur servant de gestionnaire pour les machines virtuelles instanciées et d'isolateur entre elles et le système d'exploitation de la machine physique. Il est possible que certains hyperviseurs comme VMWare ESXi soient installés à la place d'un système d'exploitation, c'est la virtualisation de type I. Le principe de cette technologie est de créer un environnement virtuel en simulant un ordinateur complet. L'hyperviseur alloue les ressources que l'on souhaite attribué au nouvel environnement en fonction des ressources physiques disponibles. Le lien entre les ressources physique et les machines virtuelles est fait grâce à l'hyperviseur.
+La plus répandue est la virtualisation complète. Elle utilise un hyperviseur servant de gestionnaire pour les machines virtuelles instanciées et d'isolateur entre elles et le système d'exploitation de la machine physique. Il est possible que certains hyperviseurs comme VMWare ESXi soient installés à la place d'un système d'exploitation, c'est la virtualisation de type I. Le principe de cette technologie est de créer un environnement virtuel en simulant un ordinateur complet. L'hyperviseur alloue les ressources que l'on souhaite attribuer au nouvel environnement en fonction des ressources physiques disponibles. Le lien entre les ressources physiques et les machines virtuelles est fait grâce à l'hyperviseur.
 
 [[img-sunset]]
 image::./Images/Schema_Virtualisation.png[caption="Figure 3: ", title="Représentation de la virtualisation de type I"]
@@ -11,12 +11,12 @@ image::./Images/Schema_Virtualisation.png[caption="Figure 3: ", title="Représen
 
 L'avantage de cette technologie est qu'il est possible de créer un environnement virtuel Windows sur un serveur Linux. Cependant, sa principale limitation est son coût en matière de ressources. Par exemple, un utilisateur alloue à un environnement virtuel deux gigaoctets de mémoire. Cette quantité est déduite de la quantité totale disponible matériellement et ce, même si l'environnement n'en utilise que la moitié.
 
-La nouvelle technologie émergente est la _containerisation_. Elle est poussée par la culture DevOps et de nombreux logiciels tels que _LXC_ et surtout _Docker_. Au lieu de simuler un ordinateur complet comme la précédente technique évoquée, le logiciel instancie un environnement en l'isolant avec son propre espace mémoire. Les ressources systèmes et matériel sont partagées entre le kernel de la machine hôte et les "containers". Le principe de cette technologie est de pouvoir créer et détruire rapidement et simplement une application avec toute sa configuration.
+La nouvelle technologie émergente est la _containerisation_. Elle est poussée par la culture DevOps et de nombreux logiciels tels que _LXC_ et surtout _Docker_. Au lieu de simuler un ordinateur complet comme la précédente technique évoquée, le logiciel instancie un environnement et l'isole, avec son espace mémoire, du reste des processus s'exécutant sur l'hôte. Les ressources systèmes et matériels sont partagées entre le kernel de la machine hôte et les "containers". Cette technique s'appuie sur un ensemble de fonctionnalité du kernel Linux comme _Cgroups_ et _namespaces_. Le principe de cette technologie est de pouvoir créer et détruire rapidement et simplement une application avec toute sa configuration.
 
 [[img-sunset]]
 image::./Images/Schema_Containerisation.png[caption="Figure 4: ", title="Représentation de la containerisation"]
 
-L'avantage est de pouvoir avoir des applications que l'on peut migrer d'une machine à une autre et redéployer rapidement et simplement en cas de panne sur le container. Néanmoins, vu que la technologie utilise le partage des appels système entre l'hôte et les machines virtuelles, il n'est pas possible d'instancier un environnement Windows sur un système d'exploitation Linux. De plus, cette technologie n'est native uniquement dans un environnement Linux. Certains logiciels tels que _Docker_ la développe sous les environnements Windows et MacOS en ajoutant une couche d'abstraction entre le système d'exploitation et les containers.
+Les avantages de cette technologie sont la simplicité pour migrer une application d'une machine à une autre et la rapidité à redéployer une application en cas de panne sur le container. Néanmoins, vu que la technologie utilise le partage des appels système entre l'hôte et les machines virtuelles, il n'est pas possible d'instancier un environnement Windows sur un système d'exploitation Linux. Le logiciel  _Docker_ la développe sous les environnements Windows et MacOS en ajoutant une couche d'abstraction entre le système d'exploitation et les containers. A terme, l'éditeur du logiciel souhaite enlever cette couche pour rendre les containers plus stables et adaptés à son environnement.
 
 Ces technologies sont de plus en plus utilisées dans les infrastructures des entreprises, soit à travers la souscription d'une offre de _cloud computing_ ou par le déploiement d'une architecture interne à l'aide de solution tels que _OpenStack_ ou _VMWare_.
 
@@ -24,7 +24,7 @@ Ces technologies sont de plus en plus utilisées dans les infrastructures des en
 
 == Zabbix
 
-Zabbix est un ensemble de logiciels permettant la surveillance de l'infrastructure à travers la récupération de mesures de ressources sur chaque environnement souhaité. Il existe trois logiciels pour le fonctionnement de cette solution, serveur, agent et proxy.
+Zabbix est un ensemble de logiciels permettant la surveillance de l'infrastructure à travers la récupération de mesures de ressources sur les environnements souhaités. Il existe trois types logiciels pour le fonctionnement de cette solution: le serveur, les agents et les proxys.
 
 === Architecture Zabbix
 
@@ -35,18 +35,18 @@ image::./Images/Architecture_Zabbix.png[caption="Figure 5: ", title="Architectur
 
 <<<
 
-Les outils _server_ et _frontend_ sont le noeud central d'une architecture Zabbix. Ils doivent être couplés à une base de données (_MySQL_, _Oracle_, _PostgreSQL_ ou _SQLite_) pour le stockage des données et à un serveur web. Le serveur Zabbix est le centre de l'architecture Zabbix. Son objectif est de récupèrer et d'analyser les données, de calculer les déclencheurs d'alertes et d'envoyer des notifications (courriel, SMS,...) aux utilisateurs en cas de problèmes détectés. Le serveur Zabbix a la capacité d'utiliser le protocole _SNMP_ afin de récupérer les données souhaitées par un utilisateur.
+Les outils _server_ et _frontend_ forment le noeud central de l'architecture Zabbix. Ils doivent être couplés à une base de données (_MySQL_, _Oracle_, _PostgreSQL_ ou _SQLite_) pour le stockage des données et à un serveur web. pour l'hébergement de l'application web. Les objectifs du serveur sont la récupération et l'analyse des données, le calcul des déclencheurs d'alertes et l'envoi des notifications (courriel, SMS,...) aux utilisateurs en cas de dysfonctionnements détectés. Le serveur Zabbix a la capacité d'analyser le protocole _SNMP_ afin de récupérer les données issues d'un matériel système sur lequel un agent ne peut être installé, un commutateur par exemple. Ces outils ne peuvent être installés que sur un environnement Linux.
 
-L'outil _proxy_ sert d'intermédiaire entre le serveur et les agents. Il est installable dans un environnement Linux. Son objectif est de limiter la charge en processus système et en ressource du serveur. Il doit être couplé à une base données pour fonctionner. Il stocke les mesures des différents hôtes dont il est maître et transfert tout le contenu de la base au serveur.
- +
+L'outil _proxy_ sert d'intermédiaire entre le serveur et les agents. Son objectif est de limiter la charge en processus système et en ressource du serveur. Il doit être couplé à une base données pour fonctionner. Il stocke les mesures des différents hôtes dont il est maître et transfert tout le contenu de la base au serveur. Comme les outils du serveur, les proxys ne peuvent être installés que sur des environnement Linux.
+
 Le logiciel _agent_ de Zabbix est un outil installable sur les environnements Linux, MacOS ou Windows. Il a pour but de récupérer au travers du système d'exploitation les mesures souhaitées et de les transmettre à son noeud supérieur.
 
-Dans le cas de notre infrastructure, nous avons décidé de ne pas mettre en place le mode distribué de l'outil. Seul des agents et un serveur sont utilisés. Cette décision n'est pas définitive mais à l'heure actuelle, son utilisation n'est pas nécessaire puisqu'elle complexifierait notre architecture qui l'est déjà.
+Dans le cas de notre infrastructure, nous avons décidé de ne pas mettre en place le mode distribué de l'outil. Seul des agents et un serveur sont installés. Cette décision n'est pas définitive mais à l'heure actuelle, l'utilisation de proxy n'est pas nécessaire puisqu'elle complexifierait notre architecture.
 
 === Communication entre un serveur et un agent
 
 Dans Zabbix, la communication entre un noeud et son maitre se fait par le protocole _HTTP_ et les données transmises sont au format _JSON_. Il existe deux modes d'échange entre les noeuds.
- +
+
 Le premier est le "check" dit passif. Le zabbix serveur envoie une requête de demande de données et l'agent lui répond en transmettant les mesures souhaitées.
 
 [[img-sunset]]
@@ -59,11 +59,11 @@ Pour commencer, l'agent initialise la connexion avec son maitre en lui demandant
 [[img-sunset]]
 image::./Images/Checks_Actif.png[caption="Figure 7: ", title="Exemple de check actif"]
 
-L'intêrét de ce dernier check est de limiter la bande passante et les processus système des noeuds maîtres. En effet, dans le premier check, le serveur envoie une requête pour chaque item. A titre d'exemple, dans notre configuration, le serveur devrait gérer plus de deux cents échanges par seconde. Si tel était le cas, notre serveur aurait une charge importante entraînant de possibles problèmes.
+L'intêrét de ce dernier check est de limiter la bande passante et les processus systèmes des noeuds maîtres. En effet, dans le premier check, le serveur envoie une requête pour chaque item. A titre d'exemple, dans notre configuration, le serveur devrait gérer plus de deux cents échanges par seconde. Si tel était le cas, notre serveur aurait une charge importante entraînant de possibles problèmes.
 
 === Système d'alertes
 
-Zabbix propose de générer une alerte lorsque certaines conditions sont remplies. Le principe de la surveillance est de notifier les administrateurs en cas de problème sur l'infrastructure. Ces alertes utilisent trois types de fonctionnalité zabbix. Les _items_ sont des éléments qui définissent les mesures à effectuer. Ensuite, les triggers générent un type événement dépendant d'une valeur collectée à partir d'un item. Enfin, les actions sont l'envoie d'une alerte à des utilisateurs selon le type d'évènement généré par un trigger.
+Zabbix propose de générer une alerte lorsque certaines conditions sont remplies. Le principe de la surveillance est de notifier les administrateurs en cas de problème sur l'infrastructure. Ces alertes utilisent trois types de fonctionnalité zabbix. Les _items_ sont des éléments qui définissent les mesures. Ensuite, les _triggers_ générent un type d'événement dépendant d'une valeur collectée à partir d'un item. Enfin, les _actions_ sont l'envoie d'une alerte à des utilisateurs selon le type d'évènement généré par un trigger.
 
 [[img-sunset]]
 image::./Images/Processus_Alerte.png[caption="Figure 8: ", title="Processus de génération d'une alerte"]
