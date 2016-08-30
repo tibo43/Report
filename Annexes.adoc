@@ -68,4 +68,4 @@ Zabbix propose de générer une alerte lorsque certaines conditions sont remplie
 [[img-sunset]]
 image::./Images/Processus_Alerte.png[caption="Figure 8: ", title="Processus de génération d'une alerte"]
 
-Les évènements dits "problème" possèdent une certaine sévérité, définie par l'utilisateur. Il existe six degrés de gravité dans Zabbix. Dans le cas de ISC France, nous avons fait le choix d'effectuer une action uniquement si la sévérité est élevée. Nous avons été motivés dans ce choix par le nombre élevé de courriels reçu sans ce filtre.
+Les évènements dits "problèmes" possèdent une certaine sévérité, définie par l'utilisateur. Il existe six degrés de gravité dans Zabbix. Dans le cas de ISC France, nous avons fait le choix d'envoyer un courriel et de jouer un son uniquement si la sévérité est élevée. Nous avons été motivés dans ce choix par le nombre élevé de messages reçus sans ce filtre.
