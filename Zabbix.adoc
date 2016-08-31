@@ -28,7 +28,9 @@ Enfin, les membres du pôle CRCI sont déjà formés sur cet outil. Cet avantage
 === Environnement de test et mise en production
 
 Après le choix du logiciel, nous avons dû le déployer. Notre contrainte a été de configurer la future solution tout en gardant actif l'outil présent sur l'infrastructure. Pour cela, nous avons recréé un environnement de tests comportant le minimum d'environnement nécessaire à une configuration optimale.
- +
+
+<<<
+
 Zabbix est une offre de surveillance et de mesure de l'activité infrastructurale d'une entreprise. Il est basé sur le système de client-serveur signifiant que les agents envoient au serveur les données qu'il souhaite récupérer. La solution possède trois logiciels.
 
 ** Le _Serveur_ est le centre du service. Il est composé de deux logiciels, _server_ et _frontend_. Ces outils doivent être combiné à une base de données servant à stocker les données récupérées et à un serveur web. Il héberge l'interface web permettant d'ochestrer les mesures à récupérer et de rendre leurs lectures plus simples. Le serveur Zabbix récupère les données à l'aide de requêtes réseaux utilisant le protocole _HTTP_ (combiné au format _JSON_) ou le protocole _SNMP_.

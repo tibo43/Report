@@ -16,7 +16,11 @@ La nouvelle technologie émergente est la _containerisation_. Elle est poussée 
 [[img-sunset]]
 image::./Images/Schema_Containerisation.png[caption="Figure 4: ", title="Représentation de la containerisation"]
 
-Les avantages de cette technologie sont la simplicité pour migrer une application d'une machine à une autre et la rapidité à redéployer une application en cas de panne sur le container. Néanmoins, vu que la technologie utilise le partage des appels système entre l'hôte et les machines virtuelles, il n'est pas possible d'instancier un environnement Windows sur un système d'exploitation Linux. Le logiciel  _Docker_ la développe sous les environnements Windows et MacOS en ajoutant une couche d'abstraction entre le système d'exploitation et les containers. A terme, l'éditeur du logiciel souhaite enlever cette couche pour rendre les containers plus stables et adaptés à son environnement.
+Les avantages de cette technologie sont la simplicité pour migrer une application d'une machine à une autre et la rapidité à redéployer une application en cas de panne sur le container. Néanmoins, vu que la technologie utilise le partage des appels système entre l'hôte et les machines virtuelles, il n'est pas possible d'instancier un environnement Windows sur un système d'exploitation Linux.
+
+<<<
+
+Le logiciel  _Docker_ la développe sous les environnements Windows et MacOS en ajoutant une couche d'abstraction entre le système d'exploitation et les containers. A terme, l'éditeur du logiciel souhaite enlever cette couche pour rendre les containers plus stables et adaptés à son environnement.
 
 Ces technologies sont de plus en plus utilisées dans les infrastructures des entreprises, soit à travers la souscription d'une offre de _cloud computing_ ou par le déploiement d'une architecture interne à l'aide de solution tels que _OpenStack_ ou _VMWare_.
 
