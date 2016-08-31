@@ -1,0 +1,35 @@
+[cols="5a,90a,5a"]
+|===
+<|1
+<|Catégorie des services du Cloud Computing et les solutions connues . .
+^|3
+
+<|2
+<|DevOps représenté en cycle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+^|4
+
+<|3
+<|Représentation de la virtualisation de type I . . . . . . . . . . . . . . . . . . . . . . .
+^|21
+
+<|4
+<|Représentation de la containerisation . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+^|22
+
+<|5
+<|Architecture complète d’une supervision par les outils Zabbix . . . . . . . .
+^|24
+
+<|6
+<|Exemple de check passif . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+^|26
+
+<|7
+<|Exemple de check actif . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+^|26
+
+<|8
+<|Processus de génération d’une alerte . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+^|27
+
+|===

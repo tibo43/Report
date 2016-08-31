@@ -1,72 +1,72 @@
-Ansible::
-logiciel open source permettant la configuration et la gestion à distance des machines.
+*Ansible*::
+Logiciel open source permettant la configuration et la gestion à distance des machines.
 
-Cloud Computing::
-paradigme récent ayant pour but de centraliser et d'utiliser au maximum la puissance de calcul de chaque serveur. Le principe est de limiter les dépenses en matériel et en ressource électrique. De nombreuses entreprises fournissent à leurs clients différents services issus de ce paradigme. Le Cloud Computing se décline en trois catégories de service, _Infrastructure As A Service_ (IaaS), _Platforme As A Service_ (PaaS) et _Software As a Service_ (SaaS).
+*Cloud Computing*::
+Paradigme récent ayant pour but de centraliser et d'utiliser au maximum la puissance de calcul de chaque serveur. Le principe est de limiter les dépenses en matériel et en ressource électrique. De nombreuses entreprises fournissent à leurs clients différents services issus de ce paradigme. Le Cloud Computing se décline en trois catégories de service, _Infrastructure As A Service_ (IaaS), _Platforme As A Service_ (PaaS) et _Software As a Service_ (SaaS).
 
 [[img-sunset]]
 image::./Images/Services_CloudComputing.png[caption="Figure 1: ", title="Catégorie des services du Cloud Computing et les solutions connues", width="309", height="205"]
 
-Containerisation::
-sous-catégorie de la virtualisation. Il s'agit d'instancier uniquement le système d'exploitation de chaque environnement virtuel souhaité.
+*Containerisation*::
+Sous-catégorie de la virtualisation. Il s'agit d'instancier uniquement le système d'exploitation de chaque environnement virtuel souhaité.
 
-Continuous Delivery::
-approche de l'ingénierie logiciel visant à assurer le fonctionnement d'une application entre chacune de ses versions. Des cycles courts sont étudiés pour corriger le plus rapidement les éventuels bogues.
+*Continuous Delivery*::
+Approche de l'ingénierie logiciel visant à assurer le fonctionnement d'une application entre chacune de ses versions. Des cycles courts sont étudiés pour corriger le plus rapidement les éventuels bogues.
 
 <<<
 
-DevOps::
-mouvement informatique visant à donner une cohésion entre les équipes de développeurs et les équipes d'administrateurs au sein d'une même entreprise.
+*DevOps*::
+Mouvement informatique visant à donner une cohésion entre les équipes de développeurs et les équipes d'administrateurs au sein d'une même entreprise.
 
 [[img-sunset]]
 image::./Images/DevOps_Cycle.png[caption="Figure 2: ", title="DevOps représenté en cycle", width="300", height="149"]
 
-Docker::
-logiciel open source permettant de créer, gérer et détruire des environnements virtuels de type container.
+*Docker*::
+Logiciel open source permettant de créer, gérer et détruire des environnements virtuels de type container.
 
-Entreprise services du numérique (ESN)::
-société de services proposant dess solution à ces clients pour des missions d'ordre informatique, anciennement nommé société de services en ingénierie informatique (SSII).
+*Entreprise services du numérique (ESN)*::
+Société de services proposant dess solution à ces clients pour des missions d'ordre informatique, anciennement nommé société de services en ingénierie informatique (SSII).
 
-InnoDB::
-moteur de stockage pour _MySQL_ et _MariaDB_.
+*InnoDB*::
+Moteur de stockage pour _MySQL_ et _MariaDB_.
 
-JavaScript Object Notation (JSON)::
-format de données textuelles issu du langage JavaScript
+*JavaScript Object Notation (JSON)*::
+Format de données textuelles issu du langage JavaScript
 
-Paradigme::
-vision classant des notions informatiques par leur solution.
+*Paradigme*::
+Vision classant des notions informatiques par leur solution.
 
-PowerShell::
-logiciel _Microsoft_ intégrant une interface en ligne de commande, permettant d'interpréter les commandes utilisateurs, et le langage de script orienté objet PowerShell.
+*PowerShell*::
+Logiciel _Microsoft_ intégrant une interface en ligne de commande, permettant d'interpréter les commandes utilisateurs, et le langage de script orienté objet PowerShell.
 
-Openstack::
-ensemble de logiciels open source visant à déployer des architectures informatiques à l'aide de la virtualisation.
+*Openstack*::
+Ensemble de logiciels open source visant à déployer des architectures informatiques à l'aide de la virtualisation.
 
 <<<
 
-Redundant Array of Independent Disks (RAID)::
-ensemble de techniques de stockage offrant la répartition et la sauvegarde des données sur plusieurs disques durs afin d'améliorer les performances, la sécurité et la tolérance aux pannes.
+*Redundant Array of Independent Disks (RAID)*::
+Ensemble de techniques de stockage offrant la répartition et la sauvegarde des données sur plusieurs disques durs afin d'améliorer les performances, la sécurité et la tolérance aux pannes.
 
-Socket::
-une interface logicielle qu'utilise un développeur pour exploiter facilement les services d'un protocole réseau.
+*Socket*::
+Interface logicielle qu'utilise un développeur pour exploiter facilement les services d'un protocole réseau.
 
-SNMP (Simple Network Management Protocol)::
-protocole réseau permettant aux administrateurs de gérer et monitorer tous les types de matériels réseaux.
+*SNMP (Simple Network Management Protocol)*::
+Protocole réseau permettant aux administrateurs de gérer et monitorer tous les types de matériels réseaux.
 
-SSH (Secure Shell)::
-protocole de communication sécurisée basé sur l'utilisation du couple clef privée/clef publique pour chiffrer et déchiffrer les communications entre deux communicants. L'échange de clefs publiques avant l'intéraction est obligatoire.
+*SSH (Secure Shell)*::
+Protocole de communication sécurisée basé sur l'utilisation du couple clef privée/clef publique pour chiffrer et déchiffrer les communications entre deux communicants. L'échange de clefs publiques avant l'intéraction est obligatoire.
 
-Supervision::
-technique industrielle visant à surveiller le bon fonctionnement d'un système et à alerter les éventuelles pannes.
+*Supervision*::
+Technique industrielle visant à surveiller le bon fonctionnement d'un système et à alerter les éventuelles pannes.
 
-Virtualisation::
-technique visant à faire fonctionner plusieurs ordinateurs virtuels sur un seul ordinateur physique.
+*Virtualisation*::
+Technique visant à faire fonctionner plusieurs ordinateurs virtuels sur un seul ordinateur physique.
 
-WinRM::
-protocole de gestion à distance, propriété de _Microsoft_.
+*WinRM*::
+Protocole de gestion à distance, propriété de _Microsoft_.
 
-YAML (YAML Ain't Markup Langare)::
-format représentant des données par sérialisation, à l'image du format _XML_.
+*YAML (YAML Ain't Markup Langage)*::
+Format représentant des données par sérialisation, à l'image du format _XML_.
 
-Zabbix::
-logiciel open source permettant la surveillance et la mesure de l'ensemble des matériels réseaux compatibles d'une infrastructure.
+*Zabbix*::
+Logiciel open source permettant la surveillance et la mesure de l'ensemble des matériels réseaux compatibles d'une infrastructure.

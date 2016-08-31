@@ -1,21 +1,23 @@
-[1] L. Bass, I. Weber, L. Zhu, _DevOps: A Software Architect's Perspective_, Addison-Wesley Professional, 2015.
+[bibliography]
 
-[2] J. Hamunen, _Challenges in Adopting a Devops Approach to Software Development and Operations_, Thèse de master, Université de Aalto, 69p, 2016.
+[[[1]]] L. Bass, I. Weber, L. Zhu, _DevOps: A Software Architect's Perspective_, Addison-Wesley Professional, 2015.
 
-[3] J. Humble, D. Farley, _Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation_, Addison-Wesley Professional, 2010.
+[[[2]]] J. Hamunen, _Challenges in Adopting a Devops Approach to Software Development and Operations_, Thèse de master, Université de Aalto, 69p, 2016.
 
-[4] T. Anderson, L. Peterson, S. Shenker, J.  Turner, _Overcoming the Internet Impasse Through Virtualization_, Computer, 38:34-41, 2005.
+[[[3]]] J. Humble, D. Farley, _Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation_, Addison-Wesley Professional, 2010.
 
-[5] S. Sridharan, _A Performance Comparison of Hypervisors for Cloud Computing_, Thèse de master, Université de North Florida, 127p, 2012.
+[[[4]]] T. Anderson, L. Peterson, S. Shenker, J.  Turner, _Overcoming the Internet Impasse Through Virtualization_, Computer, 38:34-41, 2005.
 
-[6] O. Sefraoui, M. Aissaoui, M. Eleuldj, _OpenStack: Toward an Open-Source Solution for Cloud Computing_, International Journal of Computer Applications, 55:38-42, 2012.
+[[[5]]] S. Sridharan, _A Performance Comparison of Hypervisors for Cloud Computing_, Thèse de master, Université de North Florida, 127p, 2012.
 
-[7] A. Sampathkumar, _Virtualizing Intelligent River : A comparative study of alternative virtualization technologies_, Thèse de master, Université de Clemson, 85p, 2013.
+[[[6]]] O. Sefraoui, M. Aissaoui, M. Eleuldj, _OpenStack: Toward an Open-Source Solution for Cloud Computing_, International Journal of Computer Applications, 55:38-42, 2012.
 
-[8] K. Kolyshkin, _Virtualization in Linux_, White paper OpenVZ, 3:39p, 2006.
+[[[7]]] A. Sampathkumar, _Virtualizing Intelligent River : A comparative study of alternative virtualization technologies_, Thèse de master, Université de Clemson, 85p, 2013.
 
-[9] D. Merkel, _Docker: Lightweight Linux Containers for Consistent Development and Deployment_, site de Linux Journal [En Ligne], Adresse URL: http://www.linuxjournal.com/content/docker-lightweight-linux-containers-consistent-development-and-deployment
+[[[8]]] K. Kolyshkin, _Virtualization in Linux_, White paper OpenVZ, 3:39p, 2006.
 
-[10] P. Patel, A. H. Ranabahu, A. P. Sheth, _Service Level Agreement in Cloud Computing_, 2009.
+[[[9]]] D. Merkel, _Docker: Lightweight Linux Containers for Consistent Development and Deployment_, site de Linux Journal [En Ligne], Adresse URL: http://www.linuxjournal.com/content/docker-lightweight-linux-containers-consistent-development-and-deployment
 
-[11] M. J. Scheepers, _Virtualization and Containerization of Application Infrastructure: A Comparison_, 2014.
+[[[10]]] P. Patel, A. H. Ranabahu, A. P. Sheth, _Service Level Agreement in Cloud Computing_, 2009.
+
+[[[11]]] M. J. Scheepers, _Virtualization and Containerization of Application Infrastructure: A Comparison_, 2014.
