@@ -4,7 +4,7 @@ Je tiens à remercier également l'équipe du _CRCI_ de l'entité pour leur accu
  +
 *M. Arnaud Roudsovsky*, responsable du pôle _CRCI_, m'a accordé sa confiance pour cette mission. Il m'a conseillé et m'a permis d'acquérir de l'expérience professionnelle.
  +
-Je remercie *M. Frédéric Gracia* et *M. Romain Ballan*, ingénieurs au sein du pôle de m'avoir fait confiance. Leurs expériences et leurs connaissances m'ont fait progresser dans de nombreux domaines. A leurs côtés, j'ai pû découvrir les diverses facettes du métier d'ingénieur réseaux et systèmes.
+Je remercie *M. Frédéric Gracia* et *M. Romain Ballan*, ingénieurs au sein du pôle de m'avoir fait confiance. Leurs expériences et leurs connaissances m'ont fait progresser dans de nombreux domaines. A leurs côtés, j'ai pu découvrir les diverses facettes du métier d'ingénieur réseaux et systèmes.
 
 L'accueil, le soutien et les connaissances du pôle _Expertise_ d'ISC France m'ont donné l'opportunité de me familiariser avec la culture _DevOps_ et le _continuous delivery_.
 

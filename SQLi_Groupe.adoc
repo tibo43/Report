@@ -1,6 +1,6 @@
 === SQLi Group
 
-_SQLi Group_ est une entreprise de services du numérique (ESN) française foundée en 1990. Elle propose à ces clients une transformation digitale allant de la mise à disposition de nouveau moyen de communication jusqu'à la digitalisation complète de services. L'objectif de l'entreprise est de donner une nouvelle vision, combinant collaboration et innovation, à leur client.
+_SQLi Group_ est une entreprise de services du numérique (ESN) française fondée en 1990. Elle propose à ces clients une transformation digitale allant de la mise à disposition de nouveau moyen de communication jusqu'à la digitalisation complète de services. L'objectif de l'entreprise est de donner une nouvelle vision, combinant collaboration et innovation, à leur client.
 
 SQLI Group articule son objectif autour de trois offres managées par trois entités différentes :
 

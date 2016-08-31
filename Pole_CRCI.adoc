@@ -8,22 +8,22 @@ Depuis 2015, l'entreprise a décidé de faire évoluer son infrastructure et ses
 
 * _Culture_ : changer l'organisation en silos par une organisation plate et collaborative.
 * _Automation_ -automatisation- : rendre autonome le déploiement des environnements de travail et de production.
-* _Lean_ : fluidifier et optimiser l'organisation et les modes d'intéractions entre les différents acteurs.
+* _Lean_ : fluidifier et optimiser l'organisation et les modes d'interactions entre les différents acteurs.
 
 <<<
 
 * _Measurement_ -mesure- : mettre en place des indicateurs de performances adéquats et partagés par tous les métiers.
 * _Sharing_ -solidarité- : accroitre la communication et la collaboration entre les métiers.
 
-Ce nom est la contraction de _Development_ (référence au métier de développeur) et _Operation_ (référence aux différentes discpline du métier d'ingénieur système et réseau).
+Ce nom est la contraction de _Development_ (référence au métier de développeur) et _Operation_ (référence aux différentes disciplines du métier d'ingénieur système et réseau).
 Il symbolise le thème émergeant de cette culture, à savoir l'étroite collaboration de ces métiers dans la réalisation des projets.
 
 Au sein d'ISC France, cette culture est poussée par le pôle CRCI et le pôle Expertise.
 Ce dernier est le garant de la qualité technique des projets de part un support technique, la dispense de formations et la mise en place de bonnes pratiques que doivent exécuter les développeurs.
 Dans la culture DevOps, les experts sont, notamment, responsables de la mise en place et de la maintenance des outils de production tel que les plateformes d'intégration continue.
 Le _Continuous Delivery_ est une approche de développement en lien avec la mouvance DevOps.
-Il a pour but de développer, de tester et de sortir des versions de façon rapide et répeter jusqu'à avoir un logiciel de haute qualité [3].
+Il a pour but de développer, de tester et de sortir des versions de façon rapide et répéter jusqu'à avoir un logiciel de haute qualité [3].
 En plus d'insuffler aux développeurs la culture DevOps, le pôle expertise est le lien entre les équipes de production et le pôle CRCI. Il se doit de calculer quantitativement les ressources utiles au bon déroulement des projets et d'apprécier qualitativement les environnements de développement fournis à chaque développeur.
 
 Les pôles CRCI et expertise travaillent ensemble pour donner à l'entité les moyens d'avoir une infrastructure de type _cloud computing_. C'est un nouveau _paradigme_ ayant pour objectif la centralisation et l'utilisation maximale de la puissance de calcul de chaque serveur. Son intérêt final est de limiter les dépenses en matériel et en ressources.
-Dans cette collaboration, l'expertise possède à sa charge l'administration du gestionnaire de version, privée à l'entité, et des plateformes d'intégration continue. Quand aux pôle CRCI, son rôle est d'administrer, de garantir la disponibilité et de faire évoluer l'infrastructure dans son ensemble.
+Dans cette collaboration, l'expertise possède à sa charge l'administration du gestionnaire de version, privée à l'entité, et des plateformes d'intégration continue. Quand au pôle CRCI, son rôle est d'administrer, de garantir la disponibilité et de faire évoluer l'infrastructure dans son ensemble.

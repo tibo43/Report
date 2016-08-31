@@ -66,3 +66,15 @@ include::Annexes.adoc[]
 = Bibliographie
 
 include::Bibliographie.adoc[]
+
+<<<
+
+= Résumé
+
+include::Resume.adoc[]
+
+<<<
+
+= Abstract
+
+include::Abstract.adoc[]

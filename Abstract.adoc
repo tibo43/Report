@@ -1,0 +1,5 @@
+_ISC France_ is a French digital services company belonging to _SQLi Group_. This entity is a service center with a consistent infrastructure. The appearance of the DevOps movement caused a use of new solutions. It is in this context that the internship focused on the industrial control system of the infrastructure. Its objectives are the monitoring and detection of malfunctions on infrastructure environments. With this technique, systems and network engineers have the ability to maintain and to optimize infrastructure, and to act quickly. Many solutions are known on the market. During this internship, a study of solutions was made to choose the best. _Zabbix_ was chosen by the team. A test phase has been implemented before the deployment on the infrastructure. Finally, the use of _Ansible_, configuration management tool, has been necessary to deploy the useful configurations on each environment.
+
+*Keywords*:
+
+Industrial control system, Zabbix, Ansible, Automation, DevOps

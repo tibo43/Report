@@ -1,6 +1,6 @@
 == Virtualisation
 
-La virtualisation est une technique permettant de faire fonctionner plusieurs ordinateurs virtuels à l'aide d'un seul ordinateur ou serveur physique. Cette technologie a l'avatange de limiter l'achat de matériels physiques et de gérer efficacement et simplement les environnements virtuels créés. Il existe plusieurs types de virtualisation.
+La virtualisation est une technique permettant de faire fonctionner plusieurs ordinateurs virtuels à l'aide d'un seul ordinateur ou serveur physique. Cette technologie a l'avantage de limiter l'achat de matériels physiques et de gérer efficacement et simplement les environnements virtuels créés. Il existe plusieurs types de virtualisation.
 
 La plus répandue est la virtualisation complète. Elle utilise un hyperviseur servant de gestionnaire pour les machines virtuelles instanciées et d'isolateur entre elles et le système d'exploitation de la machine physique. Il est possible que certains hyperviseurs comme VMWare ESXi soient installés à la place d'un système d'exploitation, c'est la virtualisation de type I. Le principe de cette technologie est de créer un environnement virtuel en simulant un ordinateur complet. L'hyperviseur alloue les ressources que l'on souhaite attribuer au nouvel environnement en fonction des ressources physiques disponibles. Le lien entre les ressources physiques et les machines virtuelles est fait grâce à l'hyperviseur.
 
@@ -9,7 +9,7 @@ image::./Images/Schema_Virtualisation.png[caption="Figure 3: ", title="Représen
 
 <<<
 
-L'avantage de cette technologie est qu'il est possible de créer un environnement virtuel Windows sur un serveur Linux. Cependant, sa principale limitation est son coût en matière de ressources. Par exemple, un utilisateur alloue à un environnement virtuel deux gigaoctets de mémoire. Cette quantité est déduite de la quantité totale disponible matériellement et ce, même si l'environnement n'en utilise que la moitié.
+L'avantage de cette technologie est qu'il est possible de créer un environnement virtuel Windows sur un serveur Linux. Cependant, sa principale limitation est son coût en matière de ressources. Par exemple, un utilisateur alloue à un environnement virtuel deux giga-octets de mémoire. Cette quantité est déduite de la quantité totale disponible matériellement et ce, même si l'environnement n'en utilise que la moitié.
 
 La nouvelle technologie émergente est la _containerisation_. Elle est poussée par la culture DevOps et de nombreux logiciels tels que _LXC_ et surtout _Docker_. Au lieu de simuler un ordinateur complet comme la précédente technique évoquée, le logiciel instancie un environnement et l'isole, avec son espace mémoire, du reste des processus s'exécutant sur l'hôte. Les ressources systèmes et matériels sont partagées entre le kernel de la machine hôte et les "containers". Cette technique s'appuie sur un ensemble de fonctionnalité du kernel Linux comme _Cgroups_ et _namespaces_. Le principe de cette technologie est de pouvoir créer et détruire rapidement et simplement une application avec toute sa configuration.
 
@@ -22,7 +22,7 @@ Les avantages de cette technologie sont la simplicité pour migrer une applicati
 
 Le logiciel  _Docker_ la développe sous les environnements Windows et MacOS en ajoutant une couche d'abstraction entre le système d'exploitation et les containers. A terme, l'éditeur du logiciel souhaite enlever cette couche pour rendre les containers plus stables et adaptés à son environnement.
 
-Ces technologies sont de plus en plus utilisées dans les infrastructures des entreprises, soit à travers la souscription d'une offre de _cloud computing_ ou par le déploiement d'une architecture interne à l'aide de solution tels que _OpenStack_ ou _VMWare_.
+Ces technologies sont de plus en plus utilisées dans les infrastructures des entreprises, soit à travers la souscription d'une offre de _cloud computing_ ou par le déploiement d'une architecture interne à l'aide de solutions telles que _OpenStack_ ou _VMWare_.
 
 <<<
 
@@ -32,16 +32,16 @@ Zabbix est un ensemble de logiciels permettant la surveillance de l'infrastructu
 
 === Architecture Zabbix
 
-Une architecture Zabbix peut être constituée d'au minimun, un serveur auquel on peut greffer deux autres outils, des agents et des proxys. Le serveur est le maitre de l'architecture et les proxys (si utilisés) sont les maîtres d'un certain nombre d'agents. En utilisant tous les outils, il est donc possible d'avoir une architecture distribuée. La transmission des données se fait au moyen de protocoles de communication réseaux.
+Une architecture Zabbix peut être constituée d'au minimum, un serveur auquel on peut greffer deux autres outils, des agents et des proxys. Le serveur est le maitre de l'architecture et les proxys (si utilisés) sont les maîtres d'un certain nombre d'agents. En utilisant tous les outils, il est donc possible d'avoir une architecture distribuée. La transmission des données se fait au moyen de protocoles de communication réseaux.
 
 [[img-sunset]]
 image::./Images/Architecture_Zabbix.png[caption="Figure 5: ", title="Architecture complète d'une supervision par les outils Zabbix"]
 
 <<<
 
-Les outils _server_ et _frontend_ forment le noeud central de l'architecture Zabbix. Ils doivent être couplés à une base de données (_MySQL_, _Oracle_, _PostgreSQL_ ou _SQLite_) pour le stockage des données et à un serveur web. pour l'hébergement de l'application web. Les objectifs du serveur sont la récupération et l'analyse des données, le calcul des déclencheurs d'alertes et l'envoi des notifications (courriel, SMS,...) aux utilisateurs en cas de dysfonctionnements détectés. Le serveur Zabbix a la capacité d'analyser le protocole _SNMP_ afin de récupérer les données issues d'un matériel système sur lequel un agent ne peut être installé, un commutateur par exemple. Ces outils ne peuvent être installés que sur un environnement Linux.
+Les outils _server_ et _frontend_ forment le noeud central de l'architecture Zabbix. Ils doivent être couplés à une base de données (_MySQL_, _Oracle_, _PostgreSQL_ ou _SQLite_) pour le stockage des données et à un serveur web pour l'hébergement de l'application web. Les objectifs du serveur sont la récupération et l'analyse des données, le calcul des déclencheurs d'alertes et l'envoi des notifications (courriel, SMS,...) aux utilisateurs en cas de dysfonctionnements détectés. Le serveur Zabbix a la capacité d'analyser le protocole _SNMP_ afin de récupérer les données issues d'un matériel système sur lequel un agent ne peut être installé, un commutateur par exemple. Ces outils ne peuvent être installés que sur un environnement Linux.
 
-L'outil _proxy_ sert d'intermédiaire entre le serveur et les agents. Son objectif est de limiter la charge en processus système et en ressource du serveur. Il doit être couplé à une base données pour fonctionner. Il stocke les mesures des différents hôtes dont il est maître et transfert tout le contenu de la base au serveur. Comme les outils du serveur, les proxys ne peuvent être installés que sur des environnement Linux.
+L'outil _proxy_ sert d'intermédiaire entre le serveur et les agents. Son objectif est de limiter la charge en processus système et en ressource du serveur. Il doit être couplé à une base de données pour fonctionner. Il stocke les mesures des différents hôtes dont il est maître et transfert tout le contenu de la base au serveur. Comme les outils du serveur, les proxys ne peuvent être installés que sur des environnements Linux.
 
 Le logiciel _agent_ de Zabbix est un outil installable sur les environnements Linux, MacOS ou Windows. Il a pour but de récupérer au travers du système d'exploitation les mesures souhaitées et de les transmettre à son noeud supérieur.
 
@@ -58,18 +58,18 @@ image::./Images/Checks_Passif.png[caption="Figure 6: ", title="Exemple de check 
 
 Le second est le "check" actif. Dans ce cas, c'est l'agent qui amorce les échanges. La communication est décomposée en deux étapes distinctes.
  +
-Pour commencer, l'agent initialise la connexion avec son maitre en lui demandant la liste de toutes les données qu'il souhaite récupérer. Une fois fait, l'agent démarre sa collecte de données à intervalle fixe pour chacunes des mesures. Une fois que la liste est complétée, il transmet au serveur les résultats.
+Pour commencer, l'agent initialise la connexion avec son maitre en lui demandant la liste de toutes les données qu'il souhaite récupérer. Une fois fait, l'agent démarre sa collecte de données à intervalle fixe pour chacune des mesures. Une fois que la liste est complétée, il transmet au serveur les résultats.
 
 [[img-sunset]]
 image::./Images/Checks_Actif.png[caption="Figure 7: ", title="Exemple de check actif"]
 
-L'intêrét de ce dernier check est de limiter la bande passante et les processus systèmes des noeuds maîtres. En effet, dans le premier check, le serveur envoie une requête pour chaque item. A titre d'exemple, dans notre configuration, le serveur devrait gérer plus de deux cents échanges par seconde. Si tel était le cas, notre serveur aurait une charge importante entraînant de possibles problèmes.
+L'intérêt de ce dernier check est de limiter la bande passante et les processus systèmes des noeuds maîtres. En effet, dans le premier check, le serveur envoie une requête pour chaque item. A titre d'exemple, dans notre configuration, le serveur devrait gérer plus de deux cents échanges par seconde. Si tel était le cas, notre serveur aurait une charge importante entraînant de possibles problèmes.
 
 === Système d'alertes
 
-Zabbix propose de générer une alerte lorsque certaines conditions sont remplies. Le principe de la surveillance est de notifier les administrateurs en cas de problème sur l'infrastructure. Ces alertes utilisent trois types de fonctionnalité zabbix. Les _items_ sont des éléments qui définissent les mesures. Ensuite, les _triggers_ générent un type d'événement dépendant d'une valeur collectée à partir d'un item. Enfin, les _actions_ sont l'envoie d'une alerte à des utilisateurs selon le type d'évènement généré par un trigger.
+Zabbix propose de générer une alerte lorsque certaines conditions sont remplies. Le principe de la surveillance est de notifier les administrateurs en cas de problème sur l'infrastructure. Ces alertes utilisent trois types de fonctionnalité zabbix. Les _items_ sont des éléments qui définissent les mesures. Ensuite, les _triggers_ génèrent un type d'événement dépendant d'une valeur collectée à partir d'un item. Enfin, les _actions_ sont l'envoie d'une alerte à des utilisateurs selon le type d'évènement généré par un trigger.
 
 [[img-sunset]]
 image::./Images/Processus_Alerte.png[caption="Figure 8: ", title="Processus de génération d'une alerte"]
 
-Les évènements dits "problèmes" possèdent une certaine sévérité, définie par l'utilisateur. Il existe six degrés de gravité dans Zabbix. Dans le cas de ISC France, nous avons fait le choix d'envoyer un courriel et de jouer un son uniquement si la sévérité est élevée. Nous avons été motivés dans ce choix par le nombre élevé de messages reçus sans ce filtre.
+Les évènements dits "problèmes" possèdent une certaine sévérité, définie par l'utilisateur. Il existe six degrés de gravité dans Zabbix. Dans le cas d'ISC France, nous avons fait le choix d'envoyer un courriel et de jouer un son uniquement si la sévérité est élevée. Nous avons été motivés dans ce choix par le nombre élevé de messages reçus sans ce filtre.
